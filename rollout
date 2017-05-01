@@ -1,0 +1,21 @@
+#
+#Gitclones latest code, compiles, executes
+#change the file to compile when we have one
+#
+
+currentDate=`date +%b-%d-%H:%M:%S`
+git clone https://github.com/LLBlue/ENGR101-2017
+mv ENGR101-2017 ./ENGR101-2017-$currentDate
+rm -rf ENGR101-2017
+cd ENGR101-2017-$currentDate
+gcc -o rollout robot-methods.cpp
+./rollout
+exit 0
+
+#
+#execute with "sh rollout" while in directory
+#
+#if it doesn't work:
+#chmod +x rollout
+#chmod 755 rollout
+#
