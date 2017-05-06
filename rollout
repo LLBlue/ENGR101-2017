@@ -10,7 +10,7 @@ rm -rf ENGR101-2017
 cd ENGR101-2017-$currentDate
 gcc -c RobotFunction.cpp -o RobotFunction.o
 gcc -c RobotRun.cpp -o RobotRun.o
-gcc RobotRun.o RobotFunction.o LibE101.so -o rollout
+gcc RobotRun.o RobotFunction.o -o rollout
 ./rollout
 exit 0
 
