@@ -103,7 +103,7 @@ int see_and_reverse() {
 
 //print some stuff (testing)
 int testPrint() {
-	for (int i; , i<+5; , i++;) {
+	for (i=0; i<=5; i++) {
 		printf("%d\n", i);
 	}
 	return 0;
