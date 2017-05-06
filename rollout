@@ -8,7 +8,9 @@ git clone https://github.com/LLBlue/ENGR101-2017
 mv ENGR101-2017 ./ENGR101-2017-$currentDate
 rm -rf ENGR101-2017
 cd ENGR101-2017-$currentDate
-gcc -o rollout robot-methods.cpp
+gcc -c RobotFunction.cpp -o RobotFunction.o
+gcc -c RobotRun.cpp -o RobotRun.o
+gcc RobotRun.o RobotFunction.o LibE101.so -o rollout
 ./rollout
 exit 0
 
