@@ -100,3 +100,10 @@ int see_and_reverse() {
 	}
 	return 0;
 }
+
+//print some stuff (testing)
+int testPrint() {
+	for (i, i<+5, i++) {
+		printf("%d\n", i);
+	}
+}
