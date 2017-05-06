@@ -105,6 +105,6 @@ int see_and_reverse() {
 int testPrint() {
 	for (i, i<+5, i++) {
 		printf("%d\n", i);
-		return 0;
 	}
+	return 0;
 }
