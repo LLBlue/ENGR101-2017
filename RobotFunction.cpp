@@ -124,6 +124,10 @@ int seeLineX(int Y) {
 	return sum;	
 }
 
+/*takes a picture, converts it to black and white, and displays it
+ *use to test colour limit
+ */
+
 int testSee() {
 	take_picture();
 	display_picture(1,0);
@@ -142,6 +146,7 @@ int testSee() {
 			set_pixel(x, y, w, w, w);
 		}
 	}
+	display_picture(5,0);
 	return 0;
 }
 
