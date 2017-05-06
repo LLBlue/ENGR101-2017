@@ -1,3 +1,5 @@
+#include "RobotFunction.h"
+
 //Average 5 Readings
 int see() {
 	int IR;
