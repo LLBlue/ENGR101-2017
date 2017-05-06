@@ -1,5 +1,6 @@
 #include "RobotFunction.h"
 #include "E101.h"
+#include <stdio.h>
 
 //Average 5 Readings
 int see() {
