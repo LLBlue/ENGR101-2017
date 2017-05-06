@@ -8,6 +8,5 @@
 int  main (){
   init ();
   testPrint();
-  driveForward(3000000);
   return  0;
 }
