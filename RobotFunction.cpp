@@ -102,6 +102,49 @@ int see_and_reverse() {
 	return 0;
 }
 
+/* See a line
+ *Input Y coordinate of the line to see
+ *Output Error from the centre, negative left, positive right
+ */
+int seeLineX(int Y) {
+	take_picture();
+	int color = 3; //change if we test new colors (0 R, 1 G, 2 B, 3 W)
+	int sum = 0;
+	int w;
+	int i;
+	for (i = -160; i<160; i++) {
+		w = get_pixel(i+160, Y, color);
+		if (w<127) { //change limit depending on tests
+			w=0;
+		} else {
+			w=1;
+		}
+		sum  = sum + i*w;
+	}
+	return sum;	
+}
+
+int testSee() {
+	take_picture();
+	display_picture(1,0);
+	int color = 3;
+	int w;
+	int y;
+	int x;
+	for (y=0; y<240; y++) {
+		for (x=0; x<360; x++) {
+			w = get_pixel(x, y, color);
+			if (w<127) { //change limit depending on tests
+			w=0;
+			} else {
+			w=255;
+			}
+			set_pixel(x, y, w, w, w);
+		}
+	}
+	return 0;
+}
+
 //print some stuff (testing)
 int testPrint() {
 	int i;
