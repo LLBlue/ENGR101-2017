@@ -110,13 +110,13 @@ int see_and_reverse() {
  */
 int seeLineX(int Y) {
 	take_picture();
-	int lostLineLimit = 5; //change to change how little white you need to turn back (noise)
-	int color = 3; //change if we test new colors (0 R, 1 G, 2 B, 3 W)
-	int whiteDetectionLimit = 127; //change to detect white at different ranges
-	int allWhiteLimit = 340; //change to change when it knows when Q3 is, should be all white across but there could be noise)
+	char lostLineLimit = 5; //change to change how little white you need to turn back (noise)
+	char color = 3; //change if we test new colors (0 R, 1 G, 2 B, 3 W)
+	char whiteDetectionLimit = 127; //change to detect white at different ranges
+	char allWhiteLimit = 340; //change to change when it knows when Q3 is, should be all white across but there could be noise)
 	int error = 0;
-	int totalWhite = 0;
-	int w;
+	char totalWhite = 0;
+	char w;
 	int i;
 	for (i = -160; i<160; i++) {
 		w = get_pixel(i+160, Y, color);
