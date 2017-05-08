@@ -139,16 +139,18 @@ int seeLineX(int Y) {
 
 // Connect to gate server
 int gateSequence (){
-	int working;
-	char* serverAddress = "Server";
-	int serverPort = 000000;
-	char* sendMessage = "Hi";
-	char* serverMessage = "";
-	connect_to_server(serverAddress, serverPort);
-	send_to_server(sendMessage);
-	receive_from_server(serverMessage);
-	working = send_to_server(serverMessage);
-	return working;
+	int working = -1; 
+	while (working == -1){
+		char* serverAddress = "Server";
+		int serverPort = 000000;
+		char* sendMessage = "Hi";
+		char* serverMessage = "";
+		connect_to_server(serverAddress, serverPort);
+		send_to_server(sendMessage);
+		receive_from_server(serverMessage);
+		working = send_to_server(serverMessage); // -1 output means not working
+	}
+	return 0; 
 }
 
 
