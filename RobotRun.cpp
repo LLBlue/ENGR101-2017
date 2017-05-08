@@ -8,8 +8,10 @@
 /* Test things
 */
 int  main(){
+  int working;
   init();
-  gateSequence();
+  working = gateSequence();
+  printf("%d", working);
   testPrint();
   return  0;
 }
