@@ -160,7 +160,7 @@ int testSee() {
 	take_picture();
 	display_picture(1,0);
 	int color = 3;
-	int w;
+	char w;
 	int y;
 	int x;
 	int whiteDetectionLimit = 127; //change to detect white at different ranges
