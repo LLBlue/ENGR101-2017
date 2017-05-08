@@ -150,9 +150,11 @@ int gateSequence (){
 	return 0;
 }
 */
+
+
 /*takes a picture, converts it to black and white, and displays it
  *use to test colour limit
- */
+*/ 
 
 int testSee() {
 	take_picture();
