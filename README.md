@@ -22,3 +22,24 @@ https://docs.google.com/document/d/1dKe32ZthLgmFeoDCdHdE9qLXTYkRzMfWkC_8AHmjLdg/
 
 Link to documentation for library;
 https://github.com/kaiwhata/ENGR101-2017/wiki
+
+Week 1:
+Angus:
+Prototype Chassis
+Sensors
+Wheels
+
+Audrey:
+Go foreward
+camera detect line
+code framework
+automate compilation
+
+Isaac: 
+Go foreward
+camera working
+
+Ryan:
+Protype Chassis
+Sensoes
+Wheels
