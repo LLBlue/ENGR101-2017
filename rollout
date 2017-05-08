@@ -8,8 +8,8 @@ git clone https://github.com/LLBlue/ENGR101-2017
 mv ENGR101-2017 ./ENGR101-2017-$currentDate
 rm -rf ENGR101-2017
 cd ENGR101-2017-$currentDate
-g++ RobotRun.cpp RobotFunction.cpp -le101 -o rollout
-sudo ./rollout
+g++ RobotRun.cpp RobotFunction.cpp -le101 -o run
+sudo ./run
 exit 0
 
 #
