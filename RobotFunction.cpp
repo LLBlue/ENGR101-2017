@@ -144,7 +144,7 @@ int gateSequence (){
 	char* sendMessage = "Hi";
 	connect_to_server(serverAddress, serverPort);
 	send_to_server(sendMessage);
-	char* serverMessage = receive_from_server();
+	char* serverMessage = receive_from_server("asdfghjklqwertyuiopqazw");
 	send_to_server(serverMessage);
 	return 0;
 }
