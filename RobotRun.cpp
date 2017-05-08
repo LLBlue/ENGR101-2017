@@ -10,7 +10,7 @@
 int  main(){
   init(); 
   gateSequence();
-  testPrint();
+  testSee();
   return  0;
 }
 
