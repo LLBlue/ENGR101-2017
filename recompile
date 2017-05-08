@@ -1,0 +1,8 @@
+#
+#If you made local edits use this to recompile
+#sh recompile
+#
+
+g++ RobotRun.cpp RobotFunction.cpp -le101 -o run
+sudo ./run
+exit 0
