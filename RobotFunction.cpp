@@ -164,8 +164,8 @@ int testSee() {
 	int y;
 	int x;
 	int whiteDetectionLimit = 127; //change to detect white at different ranges
-	for (y=0; y<240; y++) {
-		for (x=0; x<360; x++) {
+	for (y=1; y<240; y++) {
+		for (x=1; x<360; x++) {
 			w = get_pixel(x, y, color);
 			if (w<whiteDetectionLimit) {
 			w=0;
