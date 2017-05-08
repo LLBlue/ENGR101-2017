@@ -8,8 +8,8 @@
 /* Test things
 */
 int  main(){
-  init();
-  testSee();
+  init(); 
+  gateSequence();
   testPrint();
   return  0;
 }
