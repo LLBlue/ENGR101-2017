@@ -8,9 +8,9 @@
 /* Test things
 */
 int  main(){
-  init(); 
-  gateSequence();
+  init();
   testSee();
+  testPrint();
   return  0;
 }
 
