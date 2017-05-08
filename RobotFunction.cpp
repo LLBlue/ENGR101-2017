@@ -20,15 +20,15 @@ int see() {
 //Drive forward
 int driveFoward(int time_microseconds) {
   int time_seconds = 0;
-	while(time_microseconds > 1000000) {
-	  time_microseconds = time_microseconds - 1000000;
-	  time_seconds++;
-	}
-	set_motor(1, 255);
-	sleep1(0, 100);
-	set_motor(2, -255);
-	sleep1(time_seconds, time_microseconds);
-	return 0;
+  while(time_microseconds > 1000000) {
+    time_microseconds = time_microseconds - 1000000;
+    time_seconds++;
+  }
+  set_motor(1, 255);
+  sleep1(0, 100);
+  set_motor(2, -255);
+  sleep1(time_seconds, time_microseconds);
+  return 0;
 }
 
 //Turn Left
