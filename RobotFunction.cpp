@@ -139,9 +139,9 @@ int seeLineX(int Y) {
 
 // Connect to gate server
 int gateSequence (){
-	const char* serverAddress = "";
-	int serverPort = ;
-	const char* sendMessage = "";
+	const char* serverAddress = "Server";
+	int serverPort = 000000;
+	const char* sendMessage = "Hi";
 	connect_to_server(serverAddress, serverPort);
 	send_to_server(sendMessage);
 	const char* serverMessage = recieve_from_server();
