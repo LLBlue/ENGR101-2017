@@ -22,6 +22,7 @@ int  main(){
 int main() {
   init();
   //Q1 open gate logic
+  gateSequence();
   //Q2 follow line logic
   //Q3 solve line maze
   //Q4 solve wall maze
