@@ -19,3 +19,6 @@ https://docs.google.com/spreadsheets/d/1nQgh_nOhFDAlciXGQ8PJ285hVJppw6sVqbUfFO2k
 
 Main Document:
 https://docs.google.com/document/d/1dKe32ZthLgmFeoDCdHdE9qLXTYkRzMfWkC_8AHmjLdg/edit?usp=sharing
+
+Link to documentation for library;
+https://github.com/kaiwhata/ENGR101-2017/wiki
