@@ -5,8 +5,23 @@
 
 //setting this up now where the main logic and stuff goes idk
 
-int  main (){
-  init ();
+/* Test things
+*/
+int  main(){
+  init();
   testPrint();
   return  0;
 }
+
+/* Real Code
+*/
+/*
+int main() {
+  init();
+  //Q1 open gate logic
+  //Q2 follow line logic
+  //Q3 solve line maze
+  //Q4 solve wall maze
+  return 0;
+}
+*/
