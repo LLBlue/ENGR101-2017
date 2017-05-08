@@ -138,6 +138,7 @@ int seeLineX(int Y) {
 }
 
 // Connect to gate server
+/*
 int gateSequence (){
 	char* serverAddress = "Server";
 	int serverPort = 000000;
@@ -148,7 +149,7 @@ int gateSequence (){
 	send_to_server(serverMessage);
 	return 0;
 }
-
+*/
 /*takes a picture, converts it to black and white, and displays it
  *use to test colour limit
  */
