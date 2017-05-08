@@ -9,7 +9,7 @@
 */
 int  main(){
   init();
-  driveFoward(int 500000);
+  driveFoward(500000);
   testPrint();
   return  0;
 }
