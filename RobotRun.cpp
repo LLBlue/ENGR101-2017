@@ -9,7 +9,7 @@
 */
 int  main(){
   init();
-  gateSequence ();
+  driveFoward(int 500000);
   testPrint();
   return  0;
 }
