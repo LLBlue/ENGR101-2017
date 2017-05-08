@@ -105,23 +105,36 @@ int see_and_reverse() {
 /* See a line
  *Input Y coordinate of the line to see
  *Output Error from the centre, negative left, positive right
+ *100000 output means line lost
+ *I00001 output means all white horizontal like (Q3 time)
  */
 int seeLineX(int Y) {
 	take_picture();
+	int lostLineLimit = 5; //change to change how little white you need to turn back (noise)
 	int color = 3; //change if we test new colors (0 R, 1 G, 2 B, 3 W)
-	int sum = 0;
+	int whiteDetectionLimit = 127; //change to detect white at different ranges
+	int allWhiteLimit = 340; //change to change when it knows when Q3 is, should be all white across but there could be noise)
+	int error = 0;
+	int totalWhite = 0;
 	int w;
 	int i;
 	for (i = -160; i<160; i++) {
 		w = get_pixel(i+160, Y, color);
-		if (w<127) { //change limit depending on tests
+		if (w<whiteDetectionLimit) {
 			w=0;
 		} else {
 			w=1;
+			totalWhite++;
 		}
-		sum  = sum + i*w;
+		error  = error + i*w;
 	}
-	return sum;	
+	if (totalWhite < lostLineLimit) {
+		return 100000; //100,000 means go back (error cannot get to 100,000 normally)
+	} else if (totalWhite > allWhiteLimit) {
+		return 100001; //100,001 means switch to Q3 logic
+	} else {
+		return error; //error code
+	}
 }
 
 /*takes a picture, converts it to black and white, and displays it
@@ -135,10 +148,11 @@ int testSee() {
 	int w;
 	int y;
 	int x;
+	int whiteDetectionLimit = 127; //change to detect white at different ranges
 	for (y=0; y<240; y++) {
 		for (x=0; x<360; x++) {
 			w = get_pixel(x, y, color);
-			if (w<127) { //change limit depending on tests
+			if (w<whiteDetectionLimit) {
 			w=0;
 			} else {
 			w=255;
