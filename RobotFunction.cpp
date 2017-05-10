@@ -153,6 +153,7 @@ int gateSequence (){
 	return 0; 
 }
 
+
 // Follow the left wall
 int followWall(){
 	int wallFront;
@@ -182,6 +183,7 @@ int followWall(){
 //Checking if wall on left
 int detectWallLeft(){
 	int switchContact;
+	int switchReading = read_analouge() //Switch input
 	if(/* Switch is touching wall */){
 		switchContact = 1; //Sets to 1 if touching wall
 	}
@@ -194,6 +196,7 @@ int detectWallLeft(){
 //Checking if wall on right
 int detectWallRight(){
 	int switchContact;
+	int switchReading = read_analouge() //Switch input
 	if(/* Switch is touching wall */){
 		switchContact = 1; //Sets to 1 if touching wall
 	}
@@ -215,6 +218,7 @@ int seeWallFront(){
 	}
 	return wallFront;
 }
+
 
 /*takes a picture, converts it to black and white, and displays it
  *use to test colour limit
