@@ -113,7 +113,7 @@ int seeLineX(int Y) {
 	char lostLineLimit = 5; //change to change how little white you need to turn back (noise)
 	char color = 3; //change if we test new colors (0 R, 1 G, 2 B, 3 W)
 	char whiteDetectionLimit = 127; //change to detect white at different ranges
-	char allWhiteLimit = 340; //change to change when it knows when Q3 is, should be all white across but there could be noise)
+	char allWhiteLimit = 310; //change to change when it knows when Q3 is, should be all white across but there could be noise)
 	int error = 0;
 	char totalWhite = 0;
 	char w;
@@ -136,6 +136,40 @@ int seeLineX(int Y) {
 		return error; //error code
 	}
 }
+
+/* See a line at position left or right
+ * Input X coordinate of line to see
+ * Output position of line on the Y plane
+ * Output 100000 if no line
+ */
+
+
+int seeLineY(int X) {
+	take_picture();
+	char noLineLimit = 5; //change to change how little white you need to determine there is no line
+	char color = 3; //change if we test new colors (0 R, 1 G, 2 B, 3 W)
+	char whiteDetectionLimit = 127; //change to detect white at different ranges
+	char position;
+	char w;
+	int i;
+	for (i = 0; i<240; i++) {
+		w = get_pixel(X, i, color);
+		if (w<whiteDetectionLimit) {
+			w=0;
+		} else {
+			w=1;
+			totalWhite++;
+		}
+		position  = position + i*w;
+	}
+	position = (int)((double)position/(double)totalWhite))
+	if (totalWhite < lostLineLimit) {
+		return 100000; //100,000 means go back (error cannot get to 100,000 normally)
+	} else {
+		return position; //error code
+	}
+}
+
 
 /*Set Speed
  * Input: speed factor (left negative, right positiuve)
