@@ -196,7 +196,7 @@ int followWall(){
 //Checking if wall on left
 int detectWallLeft(){
 	int switchContact;
-	int switchReading = read_analouge() //Switch input
+	int switchReading = read_analog() //Switch input
 	if(/* Switch is touching wall */){
 		switchContact = 1; //Sets to 1 if touching wall
 	}
@@ -209,7 +209,7 @@ int detectWallLeft(){
 //Checking if wall on right
 int detectWallRight(){
 	int switchContact;
-	int switchReading = read_analouge() //Switch input
+	int switchReading = read_analog() //Switch input
 	if(/* Switch is touching wall */){
 		switchContact = 1; //Sets to 1 if touching wall
 	}
