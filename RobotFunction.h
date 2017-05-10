@@ -7,6 +7,7 @@ int turn_right (int time_microseconds);
 int slowBackward(int time_microseconds);
 int see_and_reverse();
 int seeLineX(int Y);
+int seeLineY(int X);
 int setSpeed();
 int gateSequence ();
 int followWall();
