@@ -179,6 +179,43 @@ int followWall(){
 	}
 }
 
+//Checking if wall on left
+int detectWallLeft(){
+	int switchContact;
+	if(/* Switch is touching wall */){
+		switchContact = 1; //Sets to 1 if touching wall
+	}
+	else{
+		switchContact = 0; //Sets to 0 if not touching wall
+	}
+	return switchContact; //Returns 1 or 0 for use in followWall
+}
+
+//Checking if wall on right
+int detectWallRight(){
+	int switchContact;
+	if(/* Switch is touching wall */){
+		switchContact = 1; //Sets to 1 if touching wall
+	}
+	else{
+		switchContact = 0; //Sets to 0 if not touching wall
+	}
+	return switchContact; //Returns 1 or 0 for use in followWall
+}
+
+//Checking if wall in front
+int seeWallFront(){
+	int wallFront;
+	int cameraReading = read_analog(/*Camera's input*/);
+	if (cameraReading => /*Set distance value*/){
+		wallFront = 1;
+	}
+	else{
+		wallFront = 0;
+	}
+	return wallFront;
+}
+
 /*takes a picture, converts it to black and white, and displays it
  *use to test colour limit
 */ 
