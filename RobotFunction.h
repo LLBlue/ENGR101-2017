@@ -9,6 +9,9 @@ int see_and_reverse();
 int seeLineX(int Y);
 int gateSequence ();
 int followWall();
+int detectLeftWall();
+int detectRightWall();
+int seeWallFront();
 int testSee();
 int testPrint();
 #endif
