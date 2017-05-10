@@ -10,9 +10,7 @@
 int  main(){
   int working;
   init();
-  working = gateSequence();
-  printf("%d", working);
-  testPrint();
+  testSee();
   return  0;
 }
 
