@@ -166,7 +166,7 @@ int gateSequence (){
 	return 0; 
 }
 
-
+/*
 // Follow the left wall
 int followWall(){
 	int wallFront;
@@ -197,7 +197,7 @@ int followWall(){
 int detectWallLeft(){
 	int switchContact;
 	int switchReading = read_analog() //Switch input
-	if(/* Switch is touching wall */){
+	if(){ //Switch is touching wall 
 		switchContact = 1; //Sets to 1 if touching wall
 	}
 	else{
@@ -210,7 +210,7 @@ int detectWallLeft(){
 int detectWallRight(){
 	int switchContact;
 	int switchReading = read_analog() //Switch input
-	if(/* Switch is touching wall */){
+	if(){ //Switch is touching wall 
 		switchContact = 1; //Sets to 1 if touching wall
 	}
 	else{
@@ -222,8 +222,8 @@ int detectWallRight(){
 //Checking if wall in front
 int seeWallFront(){
 	int wallFront;
-	int cameraReading = read_analog(/*Camera's input*/);
-	if (cameraReading => /*Set distance value*/){
+	int cameraReading = read_analog() //Camera's input;
+	if (cameraReading => ) //Insert a distance value{
 		wallFront = 1;
 	}
 	else{
@@ -231,7 +231,7 @@ int seeWallFront(){
 	}
 	return wallFront;
 }
-
+*/
 
 /*takes a picture, converts it to black and white, and displays it
  *use to test colour limit
