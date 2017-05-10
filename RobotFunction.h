@@ -8,6 +8,7 @@ int slowBackward(int time_microseconds);
 int see_and_reverse();
 int seeLineX(int Y);
 int gateSequence ();
+int followWall();
 int testSee();
 int testPrint();
 #endif
