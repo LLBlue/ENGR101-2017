@@ -23,23 +23,46 @@ https://docs.google.com/document/d/1dKe32ZthLgmFeoDCdHdE9qLXTYkRzMfWkC_8AHmjLdg/
 Link to documentation for library;
 https://github.com/kaiwhata/ENGR101-2017/wiki
 
-Week 1:
+Week 2 Goals:
 Angus:
-Prototype Chassis
-Sensors
-Wheels
+Finalise chassis
+Add sensors
+Put photos and design docs on github
 
 Audrey:
-Go foreward
-camera detect line
-code framework
-automate compilation
+detect maze lines (completed)
+follow Q2 line (completed)
+Modify maze logic for Q3
+update task list (completed)
 
-Isaac: 
-Go foreward
-camera working
+Isaac:
+Is ill
 
 Ryan:
-Protype Chassis
-Sensoes
-Wheels
+Open Gate (completed)
+maze logic (completed)
+detect walls (completed)
+solder motors (completed
+
+
+Week 1:
+Angus:
+Prototype Chassis (Completed)
+Sensors
+Wheels (Completed)
+
+Audrey:
+Go foreward (Completed)
+camera detect line (Completed)
+code framework (Completed)
+automate compilation (Completed)
+
+Isaac: 
+Go foreward (Completed)
+camera working (Completed)
+
+Ryan:
+Protype Chassis (Completed)
+Sensors
+Wheels (Completed)
+
