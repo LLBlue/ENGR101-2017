@@ -32,7 +32,7 @@ Put photos and design docs on github
 Audrey:
 detect maze lines (completed)
 follow Q2 line (completed)
-Modify maze logic for Q3
+Modify maze logic for Q3 (completed)
 update task list (completed)
 
 Isaac:
