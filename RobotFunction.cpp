@@ -2,35 +2,32 @@
 #include "E101.h"
 #include <stdio.h>
 
-//Average 5 Readings
-int see() {
-	int IR;
-  int count = 5;
+/*Takes a given number of readings from IR sensor and averages them
+ */
+int seeIR() {
+  int IR;
+  int count = 5; //how many readings?
   int i = 0;
   int totalReading = 0;
-	while (i<count) {
-		IR = read_analog(0);
+  while (i<count) {
+    IR = read_analog(0);
     totalReading = totalReading + IR;
-		sleep1(0,100);
-		i++;
-	}
-	int averageReading = totalReading/count;
-	printf("%d", averageReading);
-	return averageReading;
+    sleep1(0,100);
+    i++;
+  }
+  int averageReading = totalReading/count;
+  printf("%d", averageReading);
+  return averageReading;
 }
 
-//Go back slowly
-int slowBackward(int time_microseconds) {
-  int time_seconds = 0;
-	while(time_microseconds > 1000000) {
-	  time_microseconds = time_microseconds - 1000000;
-	  time_seconds++;
-	}
-	set_motor(1, 127);
-	sleep1(0, 100);
-	set_motor(2, 127);
-	sleep1(time_seconds, time_microseconds);
-	return 0;
+/*Goes backwards slowly at given speed
+ */
+int slowBackward(int timeSeconds, int timeMicroseconds) {
+  set_motor(1, -80);
+  sleep1(0, 100);
+  set_motor(2, -80);
+  sleep1(timeSeconds, timeMicroseconds);
+  return 0;
 }
 
 /* See a line
@@ -39,13 +36,12 @@ int slowBackward(int time_microseconds) {
  *100000 output means line lost
  *I00001 output means all white horizontal like (Q3 time)
  */
-
 int seeLineX(int Y) {
 	take_picture();
 	char lostLineLimit = 5; //change to change how little white you need to turn back (noise)
 	char color = 3; //change if we test new colors (0 R, 1 G, 2 B, 3 W)
 	char whiteDetectionLimit = 127; //change to detect white at different ranges
-	int allWhiteLimit = 310; //change to change when it knows when Q3 is, should be all white across but there could be noise)
+	int allWhiteLimit = 250; //change to change when it knows when Q3 is, should be all white across but there could be noise)
 	int error = 0;
 	char totalWhite = 0;
 	char w;
@@ -61,15 +57,15 @@ int seeLineX(int Y) {
 		error  = error + i*w;
 	}
 	if (totalWhite < lostLineLimit) {
-		printf("0");
+		printf("Lost White Line");
 		return 100000; //100,000 means go back (error cannot get to 100,000 normally)
 		
 	} else if (totalWhite > allWhiteLimit) {
-		printf("1");
+		printf("Switch to Q3 logic");
 		return 100001; //100,001 means switch to Q3 logic
 		
 	} else {
-		printf("2");
+		printf("Return Error Code");
 		return error; //error code
 		
 	}
@@ -81,7 +77,7 @@ int seeLineX(int Y) {
  * Output 100000 if no line
  */
 
-/*
+
 int seeLineY(int X) {
 	take_picture();
 	char noLineLimit = 5; //change to change how little white you need to determine there is no line
@@ -91,7 +87,7 @@ int seeLineY(int X) {
 	char w;
 	int i;
 	for (i = 0; i<240; i++) {
-		w = get_pixel(i, X, color);
+		w = get_pixel(X, i, color);
 		if (w<whiteDetectionLimit) {
 			w=0;
 		} else {
@@ -101,18 +97,20 @@ int seeLineY(int X) {
 		position  = position + i*w;
 	}
 	position = (int)((double)position/(double)totalWhite))
-	if (totalWhite < lostLineLimit) {
-		return 100000; //100,000 means go back (error cannot get to 100,000 normally)
+	if (totalWhite < noLineLimit) {
+		return 100000; //100,000 means no line on that side (error cannot get to 100,000 normally)
 	} else {
 		return position; //error code
 	}
 }
-*/
+
 
 /*Set Speed
- * Input: speed factor (left negative, right positiuve)
+ * Input: speed factor (left negative, right positive)
  * Changes speed to turn at that rate
+ * Test which motor to + or -
  */
+
 int setSpeed (int speedFactor) {
   int cruiseControlForCool = 120; //change to modify normal travel speed
   set_motor(1, cruiseControlForCool + speedFactor);
@@ -123,7 +121,9 @@ int setSpeed (int speedFactor) {
 }
 
 
-// Connect to gate server
+/*Connects to gate server
+ *Loops until it works
+ */
 
 int gateSequence (){
 	int working = -1; 
@@ -134,38 +134,13 @@ int gateSequence (){
 		char serverMessage[24] = {0};
 		connect_to_server(serverAddress, serverPort);
 		send_to_server(sendMessage);
-		working = receive_from_server(serverMessage);
-		send_to_server(serverMessage); // -1 output means not working
+		working = receive_from_server(serverMessage); // -1 output means not working
+		send_to_server(serverMessage); 
 	}
 	return 0; 
 }
 
 /*
-// Follow the left wall
-int followWall(){
-	int wallFront;
-	int wallLeft;
-	int wallRight;
-	while(true){
-		int wallFront = seeWallFront(); //Checks if wall in front
-		if(wallFront == 1){
-			int wallLeft = seeWallLeft(); //Checks if wall at left
-			int wallRight = seeWallRight(); //Checks if wall at right
-			if (wallLeft == 1 && wallRight == 1){
-				turn_left(); //Turns left twice at wall
-				turn_left();
-			}
-			else if (wallLeft == 0){ //Code for if no wall on left
-				turn_left();
-			}
-			else if (wallLeft == 1 && wallRight == 0){ //Code for if wall on left but not right
-				turn_right();
-			}
-		}
-		//Go forward
-		//Sleep
-	}
-}
 
 //Checking if wall on left
 int detectWallLeft(){
