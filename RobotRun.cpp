@@ -21,7 +21,7 @@ int  main(){
     } else if (lineError == 100001) {
       Q2 = 1;
     } else {
-      setSpeed(lineError*speedMultiplier) 
+      setSpeed(lineError*speedMultiplier);
       sleep1(0,10000);
     }
   }
