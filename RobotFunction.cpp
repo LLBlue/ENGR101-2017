@@ -182,7 +182,7 @@ int setSpeed (int speedFactor) {
   int cruiseControlForCool = 80; //change to modify normal travel speed
   set_motor(1, cruiseControlForCool + speedFactor);
   sleep1(0, 100);
-  set_motor(2, -cruiseControlForCool + speedFactor);
+  set_motor(2, -cruiseControlForCool - speedFactor);
   sleep1(0, 100);
   return 0;
 }
