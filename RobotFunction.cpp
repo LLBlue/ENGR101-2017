@@ -195,7 +195,7 @@ int gateSequence (){
 	while (working == -1){
 		char* serverAddress = "130.195.6.196";
 		int serverPort = 1024;
-		char* sendMessage = "Please Team 2(Audrey, Angus, Ryan)";
+		char* sendMessage = "Please Team 2";
 		char serverMessage[24] = {0};
 		connect_to_server(serverAddress, serverPort);
 		send_to_server(sendMessage);
