@@ -10,7 +10,7 @@
 int  main(){
   init();
   
-  
+  /*
   char Q2 = 0;
   while (Q2 == 0) {
     double speedMultiplier = 0.5; //change this during testing
@@ -33,7 +33,7 @@ int  main(){
       sleep1(0,10000);
     }
   }
-  
+  */
   stop(1);
   stop(2);
   
