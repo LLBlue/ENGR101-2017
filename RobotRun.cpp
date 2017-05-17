@@ -11,28 +11,7 @@ int  main(){
   init();
   
   
-  gateSequence();
-  sleep1(1,0);
-  
-  
-  char Q2 = 0;
-  while (Q2 == 0) {
-    double speedMultiplier = 0.5; //change this during testing
-    int linePosition = 120; //change line position
-    int lineError = seeLineX(linePosition); 
-    if (lineError == 100000) {
-      //go backwards
-      slowBackward(100000);
-      sleep1(0,10000);
-    } else if (lineError == 100001) {
-      Q2 = 1;
-    } else {
-      int speedGo = lineError*speedMultiplier;
-      setSpeed(50);
-      sleep1(0,10000);
-    }
-  }
-  
+  seeLineX(int Y)
   
   
    
