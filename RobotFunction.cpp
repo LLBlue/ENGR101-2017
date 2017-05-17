@@ -110,7 +110,7 @@ int see_and_reverse() {
  *100000 output means line lost
  *I00001 output means all white horizontal like (Q3 time)
  */
-/*
+
 int seeLineX(int Y) {
 	take_picture();
 	char lostLineLimit = 5; //change to change how little white you need to turn back (noise)
@@ -139,7 +139,7 @@ int seeLineX(int Y) {
 		return error; //error code
 	}
 }
-*/
+
 /* See a line at position left or right
  * Input X coordinate of line to see
  * Output position of line on the Y plane
