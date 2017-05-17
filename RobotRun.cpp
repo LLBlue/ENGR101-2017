@@ -9,9 +9,10 @@
 */
 int  main(){
   init();
-  
-      slowBackward(100000000);
-      
+  set_motor(1, 250);
+  sleep1(0, 100);
+  set_motor(2, 250);
+  sleep1(5, 100);
   return  0;
 }
 /* Real Code
