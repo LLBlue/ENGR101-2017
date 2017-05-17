@@ -28,7 +28,7 @@ int driveFoward(int time_microseconds) {
   }
   set_motor(1, 255);
   sleep1(0, 100);
-  set_motor(2, -255);
+  set_motor(2, 255);
   sleep1(time_seconds, time_microseconds);
   return 0;
 }
@@ -44,9 +44,9 @@ int turn_left (int time_microseconds) {
 	stop(1);
 	stop(2); //stops robot in case its going too fast
 	set_motor(1, speed); //assuming motor 1 is the right motor
-	sleep1(time_seconds, time_microseconds);
 	set_motor(2, speed*-1);
-  stop(1);
+	sleep1(time_seconds, time_microseconds);
+  	stop(1);
 	stop(2);
 	return 0;
 }
@@ -62,9 +62,9 @@ int turn_right (int time_microseconds) {
 	stop(1);
 	stop(2); //stops robot in case its going too fast
 	set_motor(2, speed); //assuming motor 2 is the left motor
-	sleep1(time_seconds, time_microseconds);
 	set_motor(1, speed*-1);
-  stop(1);
+	sleep1(time_seconds, time_microseconds);
+  	stop(1);
 	stop(2);
 	return 0;
 }
@@ -76,7 +76,7 @@ int slowBackward(int time_microseconds) {
 	  time_microseconds = time_microseconds - 1000000;
 	  time_seconds++;
 	}
-	set_motor(1, -127);
+	set_motor(1, 127);
 	sleep1(0, 100);
 	set_motor(2, 127);
 	sleep1(time_seconds, time_microseconds);
@@ -92,7 +92,7 @@ int see_and_reverse() {
 		if (IR > detection_limit){
 			set_motor(1,255);
 			sleep1(0,100);
-			set_motor(2,-255);
+			set_motor(2,255);
 			sleep1(0,100000);
 		} else {
 			stop(1);
@@ -156,7 +156,7 @@ int seeLineY(int X) {
 	char w;
 	int i;
 	for (i = 0; i<240; i++) {
-		w = get_pixel(X, i, color);
+		w = get_pixel(i, X, color);
 		if (w<whiteDetectionLimit) {
 			w=0;
 		} else {
@@ -182,7 +182,7 @@ int setSpeed (int speedFactor) {
   int cruiseControlForCool = 120; //change to modify normal travel speed
   set_motor(1, cruiseControlForCool + speedFactor);
   sleep1(0, 100);
-  set_motor(2, -cruiseControlForCool - speedFactor);
+  set_motor(2, cruiseControlForCool - speedFactor);
   sleep1(0, 100);
   return 0;
 }
