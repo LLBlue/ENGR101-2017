@@ -9,7 +9,6 @@
 */
 int  main(){
   init();
-  sleep1(10, 0);
   set_motor(1, 250);
   set_motor(2, 250);
   sleep1(5, 0);
