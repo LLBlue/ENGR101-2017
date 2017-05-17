@@ -23,11 +23,23 @@ https://docs.google.com/document/d/1dKe32ZthLgmFeoDCdHdE9qLXTYkRzMfWkC_8AHmjLdg/
 Link to documentation for library;
 https://github.com/kaiwhata/ENGR101-2017/wiki
 
+
+Week 3 Goals:
+
+All: Make bullet point framework for report
+
+Angus: Draw robot diagram, mount side IR, upload design documents
+
+Audrey: Organize github wiki, Add ID control, Make stop script, Make batch delete script
+
+Ryan: See red patch, fix col/row mixup, fix negative speed error, fix follow line
+
+
 Week 2 Goals:
 Angus:
-Finalise chassis
-Add sensors
-Put photos and design docs on github
+Finalise chassis (completed)
+Add sensors (completed)
+Put photos and design docs on github (completed)
 
 Audrey:
 detect maze lines (completed)
