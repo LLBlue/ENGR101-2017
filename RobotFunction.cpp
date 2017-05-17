@@ -275,7 +275,7 @@ int seeWallFront(){
 
 int testSee() {
 	take_picture();
-	display_picture(1,0);
+	display_picture(5,0);
 	int color = 3;
 	char w;
 	int y;
