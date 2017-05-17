@@ -13,6 +13,8 @@ int  main(){
   sleep1(0, 100);
   set_motor(2, 250);
   sleep1(5, 100);
+  stop(1);
+    	stop(2);
   return  0;
 }
 /* Real Code
