@@ -121,7 +121,7 @@ int seeLineX(int Y) {
 	char totalWhite = 0;
 	char w;
 	int i;
-	for (i = -159; i<160; i++) {
+	for (i = -160; i<160; i++) {
 		w = get_pixel(Y, i+160, color);
 		printf("%d \n", i+160);
 		if (w<whiteDetectionLimit) {
