@@ -28,7 +28,7 @@ int  main(){
       Q2 = 1;
     } else {
       int speedGo = lineError*speedMultiplier;
-      setSpeed(speedGo);
+      setSpeed(10);
       sleep1(0,10000);
     }
   }
