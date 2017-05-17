@@ -28,6 +28,9 @@ int  main(){
     }
   }
   
+  stop(1);
+  stop(2);
+  
   
    
   return  0;
