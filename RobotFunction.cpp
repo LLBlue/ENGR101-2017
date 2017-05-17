@@ -12,6 +12,7 @@ int see() {
 		IR = read_analog(0);
     totalReading = totalReading + IR;
 		sleep1(0,100);
+		i++;
 	}
 	int averageReading = totalReading/count;
 	printf("%d", averageReading);
