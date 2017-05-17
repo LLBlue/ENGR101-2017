@@ -54,7 +54,6 @@ int main() {
     int linePosition = 120; //change line position
     int lineError = seeLineX(linePosition); 
     if (lineError == 100000) {
-      //go backwards
       slowBackward(0, 100000);
       sleep1(0,10000);
     } else if (lineError == 100001) {
