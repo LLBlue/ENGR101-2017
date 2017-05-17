@@ -11,7 +11,7 @@ int  main(){
   init();
   
   
-  seeLineX(int Y)
+  seeLineX(120);
   
   
    
