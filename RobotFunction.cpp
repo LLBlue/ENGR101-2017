@@ -43,8 +43,8 @@ int turn_left (int time_microseconds) {
 	}
 	stop(1);
 	stop(2); //stops robot in case its going too fast
-	set_motor(1, speed); //assuming motor 1 is the right motor
-	set_motor(2, speed*-1);
+	set_motor(2, speed); //assuming motor 1 is the right motor
+	set_motor(1, speed*-1);
 	sleep1(time_seconds, time_microseconds);
   	stop(1);
 	stop(2);
@@ -61,8 +61,8 @@ int turn_right (int time_microseconds) {
 	}
 	stop(1);
 	stop(2); //stops robot in case its going too fast
-	set_motor(2, speed); //assuming motor 2 is the left motor
-	set_motor(1, speed*-1);
+	set_motor(1, speed); //assuming motor 2 is the left motor
+	set_motor(2, speed*-1);
 	sleep1(time_seconds, time_microseconds);
   	stop(1);
 	stop(2);
@@ -133,10 +133,13 @@ int seeLineX(int Y) {
 	}
 	if (totalWhite < lostLineLimit) {
 		return 100000; //100,000 means go back (error cannot get to 100,000 normally)
+		printf("0");
 	} else if (totalWhite > allWhiteLimit) {
 		return 100001; //100,001 means switch to Q3 logic
+		printf("1");
 	} else {
 		return error; //error code
+		printf("2");
 	}
 }
 
