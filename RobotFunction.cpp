@@ -187,8 +187,9 @@ int setSpeed (int speedFactor) {
   return 0;
 }
 
-/*
+
 // Connect to gate server
+
 int gateSequence (){
 	int working = -1; 
 	while (working == -1){
@@ -203,7 +204,7 @@ int gateSequence (){
 	}
 	return 0; 
 }
-*/
+
 /*
 // Follow the left wall
 int followWall(){
