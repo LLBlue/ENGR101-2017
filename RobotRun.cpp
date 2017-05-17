@@ -10,6 +10,7 @@
 int  main(){
   int working;
   init();
+  see();
   testSee();
   return  0;
 }
