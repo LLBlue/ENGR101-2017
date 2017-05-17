@@ -199,8 +199,8 @@ int gateSequence (){
 		char serverMessage[24] = {0};
 		connect_to_server(serverAddress, serverPort);
 		send_to_server(sendMessage);
-		receive_from_server(serverMessage);
-		working = send_to_server(serverMessage); // -1 output means not working
+		working = receive_from_server(serverMessage);
+		send_to_server(serverMessage); // -1 output means not working
 	}
 	return 0; 
 }
