@@ -9,10 +9,6 @@
 */
 int  main(){
   init();
-  set_motor(1,120);
-  sleep1(1,0);
-  stop(1);
-  /*
   char Q2 = 0;
   while (Q2 == 0) {
     double speedMultiplier = 0.5; //change this during testing
@@ -37,7 +33,7 @@ int  main(){
   }
   stop(1);
   stop(2);
-  */
+  
   
   
    
