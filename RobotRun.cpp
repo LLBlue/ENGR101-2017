@@ -9,23 +9,9 @@
 */
 int  main(){
   init();
-  char Q2 = 0;
-  while (Q2 == 0) {
-    double speedMultiplier = 0.5; //change this during testing
-    int linePosition = 120; //change line position
-    int lineError = seeLineX(linePosition); 
-    if (lineError == 100000) {
-      //go backwards
-      slowBackward(100000);
-      sleep1(0,10000);
-    } else if (lineError == 100001) {
-      Q2 = 1;
-    } else {
-      int speedGo = lineError*speedMultiplier;
-      setSpeed(speedGo);
-      sleep1(0,10000);
-    }
-  }
+  
+      slowBackward(100000000);
+      
   return  0;
 }
 /* Real Code
@@ -40,7 +26,7 @@ int main() {
   while (Q2 == 0) {
     double speedMultiplier = 0.5; //change this during testing
     int linePosition = 120; //change line position
-    lineError = seeLineX(linePosition); 
+    int lineError = seeLineX(linePosition); 
     if (lineError == 100000) {
       //go backwards
       slowBackward(100000);
@@ -48,7 +34,8 @@ int main() {
     } else if (lineError == 100001) {
       Q2 = 1;
     } else {
-      setSpeed(lineError*speedMultiplier) 
+      int speedGo = lineError*speedMultiplier;
+      setSpeed(speedGo);
       sleep1(0,10000);
     }
   }
