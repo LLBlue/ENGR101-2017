@@ -19,6 +19,7 @@ int main() {
   init();
   //Q1 open gate logic
   gateSequence();
+  sleep1(1,0);
   //Q2 follow line logic
   char Q2 = 0;
   while (Q2 == 0) {
