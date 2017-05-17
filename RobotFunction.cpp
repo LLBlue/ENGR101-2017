@@ -193,8 +193,8 @@ int setSpeed (int speedFactor) {
 int gateSequence (){
 	int working = -1; 
 	while (working == -1){
-		char* serverAddress = "Server";
-		int serverPort = 000000;
+		char* serverAddress = 130.195.6.196;
+		int serverPort = 1014;
 		char* sendMessage = "Hi";
 		char* serverMessage = "";
 		connect_to_server(serverAddress, serverPort);
