@@ -16,5 +16,5 @@ int  main(){
 /* Put this in the home directory and compile it with
  *g++ RobotStop.cpp -le101 -o stop
  *chmod +x stop
- *./stop
+ *sudo ./stop
  */
