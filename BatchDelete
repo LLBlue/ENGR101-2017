@@ -1,0 +1,5 @@
+#
+#Deletes all folders made from rollout
+#
+
+rm -rf ENGR101-2017-*
