@@ -9,21 +9,22 @@
 */
 int  main(){
   init();
+  sleep1(10, 0);
   set_motor(1, 250);
   set_motor(2, 250);
-  sleep(5, 0);
+  sleep1(5, 0);
   set_motor(1, 200);
   set_motor(2, 200);
-  sleep(5, 0);
+  sleep1(5, 0);
   set_motor(1, 150);
   set_motor(2, 150);
-  sleep(5, 0);
+  sleep1(5, 0);
   set_motor(1, 100);
   set_motor(2, 100);
-  sleep(5, 0);
+  sleep1(5, 0);
   set_motor(1, 50);
   set_motor(2, 50);
-  sleep(5, 0);
+  sleep1(5, 0);
   /*
   char Q2 = 0;
   while (Q2 == 0) {
