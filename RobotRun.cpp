@@ -16,7 +16,7 @@ int  main(){
     int lineError = seeLineX(linePosition); 
     if (lineError == 100000) {
       //go backwards
-      slowBackward(100000);
+      slowBackward(0, 100000);
       sleep1(0,10000);
     } else if (lineError == 100001) {
       Q2 = 1;
@@ -55,7 +55,7 @@ int main() {
     int lineError = seeLineX(linePosition); 
     if (lineError == 100000) {
       //go backwards
-      slowBackward(100000);
+      slowBackward(0, 100000);
       sleep1(0,10000);
     } else if (lineError == 100001) {
       Q2 = 1;
