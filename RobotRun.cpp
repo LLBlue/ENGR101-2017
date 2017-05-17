@@ -13,7 +13,7 @@ int  main(){
   while (Q2 == 0) {
     double speedMultiplier = 0.5; //change this during testing
     int linePosition = 120; //change line position
-    lineError = seeLineX(linePosition); 
+    int lineError = seeLineX(linePosition); 
     if (lineError == 100000) {
       //go backwards
       slowBackward(100000);
