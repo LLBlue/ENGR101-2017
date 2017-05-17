@@ -10,7 +10,7 @@
 int  main(){
   init();
   set_motor(1,120);
-  sleep(1,0);
+  sleep1(1,0);
   stop(1);
   /*
   char Q2 = 0;
