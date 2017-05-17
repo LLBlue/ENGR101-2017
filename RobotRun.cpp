@@ -9,12 +9,7 @@
 */
 int  main(){
   init();
-  set_motor(1, 250);
-  sleep1(0, 100);
-  set_motor(2, 250);
-  sleep1(5, 100);
-  stop(1);
-    	stop(2);
+  gateSequence ();
   return  0;
 }
 /* Real Code
