@@ -144,7 +144,7 @@ int seeLineX(int Y) {
  * Output 100000 if no line
  */
 
-
+/*
 int seeLineY(int X) {
 	take_picture();
 	char noLineLimit = 5; //change to change how little white you need to determine there is no line
@@ -170,7 +170,7 @@ int seeLineY(int X) {
 		return position; //error code
 	}
 }
-
+*/
 
 /*Set Speed
  * Input: speed factor (left negative, right positiuve)
@@ -185,6 +185,7 @@ int setSpeed (int speedFactor) {
   return 0;
 }
 
+/*
 // Connect to gate server
 int gateSequence (){
 	int working = -1; 
@@ -200,7 +201,7 @@ int gateSequence (){
 	}
 	return 0; 
 }
-
+*/
 /*
 // Follow the left wall
 int followWall(){
