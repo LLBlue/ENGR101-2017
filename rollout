@@ -9,6 +9,7 @@ mv ENGR101-2017 ./ENGR101-2017-$currentDate
 rm -rf ENGR101-2017
 cd ENGR101-2017-$currentDate
 g++ RobotRun.cpp RobotFunction.cpp -le101 -o run
+chmod +x recompile
 sudo ./run
 exit 0
 
