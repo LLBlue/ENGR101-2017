@@ -95,6 +95,30 @@ int main() {
   }
   //Q4 solve wall maze
   
+	int wallFront;
+	int wallLeft;
+	int wallRight;
+	while(true){
+		int wallFront = seeWallFront(); //Checks if wall in front
+		if(wallFront == 1){
+			int wallLeft = seeWallLeft(); //Checks if wall at left
+			int wallRight = seeWallRight(); //Checks if wall at right
+			if (wallLeft == 1 && wallRight == 1){
+				turn_left(); //Turns left twice at wall
+				turn_left();
+			}
+			else if (wallLeft == 0){ //Code for if no wall on left
+				turn_left();
+			}
+			else if (wallLeft == 1 && wallRight == 0){ //Code for if wall on left but not right
+				turn_right();
+			}
+		}
+		//Go forward
+		//Sleep
+	}
+
+  
   
   return 0;
 }
