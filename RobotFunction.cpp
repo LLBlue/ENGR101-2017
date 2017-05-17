@@ -14,6 +14,7 @@ int see() {
 		sleep1(0,100);
 	}
 	int averageReading = totalReading/count;
+	printf(averageReading \n);
 	return averageReading;
 }
 
