@@ -23,18 +23,10 @@ int seeIR() {
  */
 int turnLeft (int seconds, int microseconds) {
   int speed = 200;
-	stop(1);
-	sleep1(0, 100);
-	stop(2); //stops robot in case its going too fast
-	sleep1(0, 100);
 	set_motor(2, speed); //assuming motor 1 is the right motor
 	sleep1(0, 100);
 	set_motor(1, speed*-1);
 	sleep1(seconds, microseconds);
-  	stop(1);
-	sleep1(0, 100);
-	stop(2);
-	sleep1(0, 100);
 	return 0;
 }
 
@@ -42,19 +34,11 @@ int turnLeft (int seconds, int microseconds) {
  */
 int turnRight (int seconds, int microseconds) {
   int speed = 200;
-	stop(1);
-	sleep1(0, 100);
-	stop(2); //stops robot in case its going too fast
-	sleep1(0, 100);
 	set_motor(1, speed); //assuming motor 2 is the left motor
 	sleep1(0, 100);
 	set_motor(2, speed*-1);
 	sleep1(seconds, microseconds);
-  	stop(1);
-	sleep1(0, 100);
-	stop(2);
-	sleep1(0, 100);
-	return 0;
+  	return 0;
 }
 
 /*Goes backwards slowly at given speed
