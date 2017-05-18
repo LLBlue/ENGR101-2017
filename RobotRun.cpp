@@ -11,7 +11,7 @@ int  main(){
   init();
   char Q2 = 0;
   while (Q2 == 0) {
-    double speedMultiplier = 0.5; //change this during testing
+    double speedMultiplier = 0.7; //change this during testing
     int linePosition = 120; //change line position
     int lineError = seeLineX(linePosition); 
     if (lineError == 100000) {
