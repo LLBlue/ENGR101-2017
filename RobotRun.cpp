@@ -11,6 +11,27 @@ int  main(){
   bool debug = true;
   init();
 	
+	
+ char Q2 = 0;
+  while (Q2 == 0) {
+    double speedMultiplier = .95; //change this during testing
+    int linePosition = 120; //change line position
+    int lineError = seeLineX(linePosition); 
+    if (lineError == 100000) {
+      //go backwards
+      slowBackward(0, 100000);
+      sleep1(0,10000);
+    } else if (lineError == 100001) {
+      Q2 = 1;
+    } else {
+      int speedGo = int ((double)lineError*speedMultiplier);
+      setSpeed(speedGo);
+      sleep1(0,10000);
+    }
+  }
+	
+	
+	
   double speedMultiplier = 0.95; //change this during testing
   int linePositionX=230; //change line position
   int linePositionLeft = 80; //change where it looks for the left and right lines
@@ -22,7 +43,7 @@ int  main(){
   while(Q3==0) {
     lineError = seeLineX(linePositionX);
 	  if(debug) {
-      printf("Line Error: %d", lineError);
+      printf("Line Error: %d\n", lineError);
     }
     if (lineError == 100000) {
       //if no more line ahead then try turning left or right
