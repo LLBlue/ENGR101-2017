@@ -87,15 +87,12 @@ int seeLineX(int Y) {
 	}
 	int totalError = (int)(error/totalWhite);
 	if (totalWhite < lostLineLimit) {
-		printf("Lost White Line\n");
 		return 100000; //100,000 means go back (error cannot get to 100,000 normally)
 		
 	} else if (totalWhite > allWhiteLimit) {
-		printf("Switch to Q3 logic\n");
 		return 100001; //100,001 means switch to Q3 logic
 		
 	} else {
-		printf("Return Error Code\n");
 		return totalError; //error code
 		
 	}
