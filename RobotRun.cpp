@@ -8,7 +8,7 @@
 /* Test things
 */
 int  main(){
-  bool debug = false;
+  bool debug = true;
   init();
   gateSequence();
   sleep1(1,0);
@@ -35,7 +35,7 @@ int  main(){
   double speedMultiplier = 0.95; //change this during testing
   int linePositionX=230; //change line position
   int linePositionLeft = 80; //change where it looks for the left and right lines
-  int linePositionRight = 200;
+  int linePositionRight = 120;
   int lineError;
   int lineOutputLeft;
   int lineOutputRight;
