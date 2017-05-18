@@ -128,7 +128,7 @@ int seeLineY(int X) {
 		}
 		position  = position + i*w;
 	}
-	position = (int)((double)position/(double)totalWhite))
+	position = (int)((double)position/(double)totalWhite));
 	if (totalWhite < noLineLimit) {
 		return 100000; //100,000 means no line on that side (error cannot get to 100,000 normally)
 	} else {
