@@ -2,4 +2,5 @@
 #Deletes all folders made from rollout
 #
 
+cd /home/pi
 rm -rf ENGR101-2017-*
