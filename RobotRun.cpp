@@ -8,7 +8,7 @@
 /* Test things
 */
 int  main(){
-  boolean debug = false;
+  bool debug = false;
   init();
   gateSequence();
   sleep1(1,0);
