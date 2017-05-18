@@ -34,7 +34,7 @@ int  main(){
   double speedMultiplier = 0.95; //change this during testing
   int linePositionX=120; //change line position
   int linePositionLeft = 80; //change where it looks for the left and right lines
-  int linePositionRight 240;
+  int linePositionRight = 240;
   int lineError = seeLineX(linePositionX);
   int lineOutputLeft;
   int lineOutputRight;
@@ -50,11 +50,11 @@ int  main(){
       turnRight(1, 0);
     } else {
       //go backwards
-      slowBackward(100000);
+      slowBackward(0, 100000);
     }
     sleep1(0,10000);
   } else {
-    setSpeed(lineError*speedMultiplier) 
+    setSpeed(lineError*speedMultiplier) ;
     sleep1(0,10000);
   }
 	
