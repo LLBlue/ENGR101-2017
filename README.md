@@ -1,6 +1,8 @@
 # ENGR101-2017
 C++ code for controlling Raspberry Pi 2s in ENGR101 during 2017
 
+Pi IP: 10.140.30.210
+
 To Edit:
 
 Main logic goes in RobotRun.cpp
