@@ -9,6 +9,10 @@
 */
 int  main(){
   init();
+  gateSequence();
+  sleep1(1,0);
+	
+	
   char Q2 = 0;
   while (Q2 == 0) {
     double speedMultiplier = 0.7; //change this during testing
