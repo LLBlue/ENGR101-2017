@@ -42,6 +42,9 @@ int  main(){
   char Q3 = 0;
   while(Q3==0) {
     lineError = seeLineX(linePositionX);
+	  if(debug) {
+      printf("Line Error: %d", lineError);
+    }
     if (lineError == 100000) {
       //if no more line ahead then try turning left or right
       lineOutputLeft = seeLineY(linePositionLeft);
@@ -55,20 +58,20 @@ int  main(){
       if(lineOutputLeft != 100000) {
         //turn left
         if(debug){
-	        printf("turning left\n");
+	  printf("turning left\n");
         }
         turnLeft(0, 625000);
       } else if (lineOutputRight !=100000) {
         //turn right
         if(debug){
-  	      printf("turning right\n");
+  	  printf("turning right\n");
         }
         turnRight(1, 250000);
       } else {
         //turn around
         turnLeft(1, 250000);
         if(debug){
-        	printf("turning around\n");
+          printf("turning around\n");
         }
       }
     sleep1(0,10000);
