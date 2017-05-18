@@ -44,22 +44,28 @@ int  main(){
     if (lineError == 100000) {
       //if no more line ahead then try turning left or right
       lineOutputLeft = seeLineY(linePositionLeft);
+      printf("output left: ", lineOutputLeft);
       lineOutputRight = seeLineY(linePositionRight);
+      printf("output right: ", lineOutputRight);
       if(lineOutputLeft != 100000) {
         //turn left
+	printf("turning left");
         turnLeft(1, 0);
       } else if (lineOutputRight !=100000) {
         //turn right
+	printf("turning right");
         turnRight(1, 0);
       } else {
         //turn around
         turnLeft(3, 0);
+	printf("turning around");
       }
     sleep1(0,10000);
     } else {
       if(lineError == 100001) {
         lineError = 0;
       }
+      printf("going straigt");
       setSpeed(lineError*speedMultiplier) ;
       sleep1(0,10000);
     }
