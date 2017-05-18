@@ -15,8 +15,6 @@ int main(){
 }
   
 
-
-/*
 int  main(){
   init();
   gateSequence();
@@ -60,16 +58,16 @@ int  main(){
       if(lineOutputLeft != 100000) {
         //turn left
 	printf("turning left\n");
-        turnLeft(1, 0);
+        turnLeft(0, 625000);
 	stop(1);
 	stop(2);
       } else if (lineOutputRight !=100000) {
         //turn right
 	printf("turning right\n");
-        turnRight(1, 0);
+        turnRight(1, 250000);
       } else {
         //turn around
-        turnLeft(3, 0);
+        turnLeft(0, );
 	printf("turning around\n");
       }
     sleep1(0,10000);
@@ -98,7 +96,6 @@ int  main(){
   return  0;
 }
 
-*/
 /* Real Code
 */
 /*
