@@ -37,7 +37,7 @@ int  main(){
 	
 	
   double speedMultiplier = 0.95; //change this during testing
-  int linePositionX=230; //change line position
+  int linePositionX=120; //change line position
   int linePositionLeft = 80; //change where it looks for the left and right lines
   int linePositionRight = 120;
   int lineError;
