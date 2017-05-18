@@ -79,9 +79,6 @@ int  main(){
 	
 	
 	
-	
-  stop(1);
-  stop(2);
   
   
   
