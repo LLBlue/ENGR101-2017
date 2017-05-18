@@ -3,6 +3,13 @@ C++ code for controlling Raspberry Pi 2s in ENGR101 during 2017
 
 Pi IP: 10.140.30.210
 
+cat ~/.bash_aliases
+cat ~/.bashrc
+vim ~/.bash_aliases
+alias pissh='ssh pi@10.140.30.210'
+source ~/.bash_aliases
+
+
 To Edit:
 
 Main logic goes in RobotRun.cpp
