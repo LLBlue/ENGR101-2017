@@ -16,7 +16,6 @@ int seeIR() {
     i++;
   }
   int averageReading = totalReading/count;
-  printf("%d", averageReading);
   return averageReading;
 }
 /*Turns left 90 degrees
