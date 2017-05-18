@@ -79,7 +79,6 @@ int seeLineX(int Y) {
  * Output 100000 if no line
  */
 
-/*
 
 int seeLineY(int X) {
 	take_picture();
@@ -88,6 +87,7 @@ int seeLineY(int X) {
 	char whiteDetectionLimit = 127; //change to detect white at different ranges
 	char position;
 	char w;
+	char totalWhite = 0;
 	int i;
 	for (i = 0; i<240; i++) {
 		w = get_pixel(X, i, color);
@@ -107,7 +107,6 @@ int seeLineY(int X) {
 	}
 }
 
-*/
 
 /*Set Speed
  * Input: speed factor (left negative, right positive)
