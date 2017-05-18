@@ -51,6 +51,8 @@ int  main(){
         //turn left
 	printf("turning left\n");
         turnLeft(1, 0);
+	stop(1);
+	stop(2);
       } else if (lineOutputRight !=100000) {
         //turn right
 	printf("turning right\n");
