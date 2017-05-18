@@ -67,7 +67,7 @@ int slowBackward(int timeSeconds, int timeMicroseconds) {
  */
 int seeLineX(int Y) {
 	take_picture();
-	char lostLineLimit = 5; //change to change how little white you need to turn back (noise)
+	char lostLineLimit = 0; //change to change how little white you need to turn back (noise)
 	char color = 3; //change if we test new colors (0 R, 1 G, 2 B, 3 W)
 	char whiteDetectionLimit = 127; //change to detect white at different ranges
 	int allWhiteLimit = 250; //change to change when it knows when Q3 is, should be all white across but there could be noise)
