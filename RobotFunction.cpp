@@ -110,9 +110,9 @@ int seeLineY(int X) {
 	char noLineLimit = 5; //change to change how little white you need to determine there is no line
 	char color = 3; //change if we test new colors (0 R, 1 G, 2 B, 3 W)
 	char whiteDetectionLimit = 127; //change to detect white at different ranges
-	char position;
+	double position;
 	char w;
-	char totalWhite = 0;
+	double totalWhite = 0;
 	int i;
 	for (i = 0; i<240; i++) {
 		w = get_pixel(X, i, color);
@@ -120,15 +120,15 @@ int seeLineY(int X) {
 			w=0;
 		} else {
 			w=1;
-			totalWhite++;
+			totalWhite = totalWhite+1;
 		}
 		position  = position + i*w;
 	}
-	position = (int)((double)position/(double)totalWhite);
+	int averagePosition = (int)(position/totalWhite);
 	if (totalWhite < noLineLimit) {
 		return 100000; //100,000 means no line on that side (error cannot get to 100,000 normally)
 	} else {
-		return position; //error code
+		return averagePosition; //error code
 	}
 }
 
