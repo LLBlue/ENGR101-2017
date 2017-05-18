@@ -31,7 +31,7 @@ int  main(){
   }
 	
   if(debug) {
-    printf("Q3 start");
+    printf("Q3 start\n");
   }
 	
 	
