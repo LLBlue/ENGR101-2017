@@ -7,14 +7,6 @@
 
 /* Test things
 */
-
-int main(){
-  init();
-  sleep1(1, 0);
-  turnLeft(0, 625000);
-}
-  
-
 int  main(){
   init();
   gateSequence();
