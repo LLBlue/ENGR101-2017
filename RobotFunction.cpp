@@ -33,6 +33,7 @@ int slowBackward(int timeSeconds, int timeMicroseconds) {
 /* See a line
  *Input Y coordinate of the line to see
  *Output Error from the centre, negative left, positive right
+ *From -160 to 160
  *100000 output means line lost
  *I00001 output means all white horizontal like (Q3 time)
  */
@@ -42,8 +43,8 @@ int seeLineX(int Y) {
 	char color = 3; //change if we test new colors (0 R, 1 G, 2 B, 3 W)
 	char whiteDetectionLimit = 127; //change to detect white at different ranges
 	int allWhiteLimit = 250; //change to change when it knows when Q3 is, should be all white across but there could be noise)
-	int error = 0;
-	char totalWhite = 0;
+	double error = 0;
+	double totalWhite = 0;
 	char w;
 	int i;
 	for (i = -160; i<160; i++) {
@@ -53,9 +54,10 @@ int seeLineX(int Y) {
 		} else {
 			w=1;
 			totalWhite++;
+			error = error+i;
 		}
-		error  = error + i*w;
 	}
+	int totalError = (int)(error/totalWhite);
 	if (totalWhite < lostLineLimit) {
 		printf("Lost White Line");
 		return 100000; //100,000 means go back (error cannot get to 100,000 normally)
@@ -66,7 +68,7 @@ int seeLineX(int Y) {
 		
 	} else {
 		printf("Return Error Code");
-		return error; //error code
+		return totalError; //error code
 		
 	}
 }
@@ -112,7 +114,7 @@ int seeLineY(int X) {
  */
 
 int setSpeed (int speedFactor) {
-  int cruiseControlForCool = 120; //change to modify normal travel speed
+  int cruiseControlForCool = 80; //change to modify normal travel speed
   set_motor(1, cruiseControlForCool + speedFactor);
   sleep1(0, 100);
   set_motor(2, cruiseControlForCool - speedFactor);
