@@ -27,6 +27,10 @@ int turnLeft (int seconds, int microseconds) {
 	sleep1(0, 100);
 	set_motor(1, speed*-1);
 	sleep1(seconds, microseconds);
+	set_motor(1, 0);
+	sleep1(0, 100);
+	set_motor(2, 0);
+	sleep1(0, 100);
 	return 0;
 }
 
@@ -38,6 +42,10 @@ int turnRight (int seconds, int microseconds) {
 	sleep1(0, 100);
 	set_motor(2, speed*-1);
 	sleep1(seconds, microseconds);
+	set_motor(1, 0);
+	sleep1(0, 100);
+	set_motor(2, 0);
+	sleep1(0, 100);
   	return 0;
 }
 
