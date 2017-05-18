@@ -10,15 +10,8 @@
 
 int main(){
   init();
-  turnLeft(1, 0);
-  sleep1(1, 0);
-  turnLeft(0, 750000);
   sleep1(1, 0);
   turnLeft(1, 500000);
-  sleep1(1, 0);
-  turnLeft(1, 250000);
-  sleep1(1, 0);
-  turnLeft(1, 100000);
 }
   
 
