@@ -30,6 +30,10 @@ int  main(){
     }
   }
 	
+  if(debug) {
+    printf("Q3 start");
+  }
+	
 	
 	
   double speedMultiplier = 0.95; //change this during testing
