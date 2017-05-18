@@ -44,10 +44,10 @@ int  main(){
     lineOutputRight = seeLineY(linePositionRight);
     if(lineOutputLeft != 100000) {
       //turn left
-      turn_left(100000);
+      turnLeft(1, 0);
     } else if (lineOutputRight !=100000) {
       //turn right
-      turn_right(100000);
+      turnRight(1, 0);
     } else {
       //go backwards
       slowBackward(100000);
