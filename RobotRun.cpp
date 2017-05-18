@@ -38,6 +38,8 @@ int  main(){
   int lineError = seeLineX(linePositionX);
   int lineOutputLeft;
   int lineOutputRight;
+  char Q3 = 0;
+  while(Q3==0) {
   if (lineError == 100000) {
     //if no more line ahead then try turning left or right
     lineOutputLeft = seeLineY(linePositionLeft);
@@ -49,14 +51,18 @@ int  main(){
       //turn right
       turnRight(1, 0);
     } else {
-      //go backwards
-      slowBackward(0, 100000);
+      //turn around
+      turnLeft(3, 0);
     }
-    sleep1(0,10000);
+  sleep1(0,10000);
   } else {
+    if(lineError == 100001) {
+      lineError = 0;
+    }
     setSpeed(lineError*speedMultiplier) ;
     sleep1(0,10000);
   }
+}
 	
 	
 	
