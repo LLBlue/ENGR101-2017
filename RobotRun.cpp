@@ -21,12 +21,7 @@ int  main(){
     } else if (lineError == 100001) {
       Q2 = 1;
     } else {
-      int speedGo = lineError*speedMultiplier;
-      if(speedGo>120) {
-        speedGo = 120;
-      } else if(speedGo<-120) {
-        speedGo= -120;
-      }
+      int speedGo = int ((double)lineError*speedMultiplier);
       setSpeed(speedGo);
       sleep1(0,10000);
     }
