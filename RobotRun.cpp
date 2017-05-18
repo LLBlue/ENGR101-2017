@@ -59,7 +59,7 @@ int  main(){
         turnRight(1, 250000);
       } else {
         //turn around
-        turnLeft(0, );
+        turnLeft(1, 250000);
 	printf("turning around\n");
       }
     sleep1(0,10000);
