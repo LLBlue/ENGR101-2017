@@ -35,34 +35,35 @@ int  main(){
   int linePositionX=120; //change line position
   int linePositionLeft = 80; //change where it looks for the left and right lines
   int linePositionRight = 240;
-  int lineError = seeLineX(linePositionX);
+  int lineError;
   int lineOutputLeft;
   int lineOutputRight;
   char Q3 = 0;
   while(Q3==0) {
-  if (lineError == 100000) {
-    //if no more line ahead then try turning left or right
-    lineOutputLeft = seeLineY(linePositionLeft);
-    lineOutputRight = seeLineY(linePositionRight);
-    if(lineOutputLeft != 100000) {
-      //turn left
-      turnLeft(1, 0);
-    } else if (lineOutputRight !=100000) {
-      //turn right
-      turnRight(1, 0);
-    } else {
-      //turn around
-      turnLeft(3, 0);
-    }
-  sleep1(0,10000);
-  } else {
-    if(lineError == 100001) {
-      lineError = 0;
-    }
-    setSpeed(lineError*speedMultiplier) ;
+    lineError = seeLineX(linePositionX);
+    if (lineError == 100000) {
+      //if no more line ahead then try turning left or right
+      lineOutputLeft = seeLineY(linePositionLeft);
+      lineOutputRight = seeLineY(linePositionRight);
+      if(lineOutputLeft != 100000) {
+        //turn left
+        turnLeft(1, 0);
+      } else if (lineOutputRight !=100000) {
+        //turn right
+        turnRight(1, 0);
+      } else {
+        //turn around
+        turnLeft(3, 0);
+      }
     sleep1(0,10000);
+    } else {
+      if(lineError == 100001) {
+        lineError = 0;
+      }
+      setSpeed(lineError*speedMultiplier) ;
+      sleep1(0,10000);
+    }
   }
-}
 	
 	
 	
