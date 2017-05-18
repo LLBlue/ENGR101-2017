@@ -30,6 +30,43 @@ int  main(){
       sleep1(0,10000);
     }
   }
+	
+  double speedMultiplier = 0.95; //change this during testing
+  int linePositionX=120; //change line position
+  int linePositionLeft = 80; //change where it looks for the left and right lines
+  int linePositionRight 240;
+  int lineError = seeLineX(linePositionX);
+  int lineOutputLeft;
+  int lineOutputRight;
+  if (lineError == 100000) {
+    //if no more line ahead then try turning left or right
+    lineOutputLeft = seeLineY(linePositionLeft);
+    lineOutputRight = seeLineY(linePositionRight);
+    if(lineOutputLeft != 100000) {
+      //turn left
+      turn_left(100000);
+    } else if (lineOutputRight !=100000) {
+      //turn right
+      turn_right(100000);
+    } else {
+      //go backwards
+      slowBackward(100000);
+    }
+    sleep1(0,10000);
+  } else {
+    setSpeed(lineError*speedMultiplier) 
+    sleep1(0,10000);
+  }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   stop(1);
   stop(2);
   
