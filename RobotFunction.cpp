@@ -79,6 +79,7 @@ int seeLineX(int Y) {
  * Output 100000 if no line
  */
 
+/*
 
 int seeLineY(int X) {
 	take_picture();
@@ -106,6 +107,7 @@ int seeLineY(int X) {
 	}
 }
 
+*/
 
 /*Set Speed
  * Input: speed factor (left negative, right positive)
