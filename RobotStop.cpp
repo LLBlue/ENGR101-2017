@@ -6,10 +6,8 @@
  * doesn't call init() as that was already called and is why we're still running
  */
 int  main(){
+  init();
   stop(1);
-  sleep1(0, 100);
-  stop(2);   
-  sleep1(1, 100);
   return  0;
 }
 
