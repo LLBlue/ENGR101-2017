@@ -112,7 +112,7 @@ int seeLineY(int X) {
 	double totalWhite = 0;
 	int i;
 	for (i = 0; i<240; i++) {
-		w = get_pixel(X, i, color);
+		w = get_pixel(i, X, color);
 		if (w<whiteDetectionLimit) {
 			w=0;
 		} else {
