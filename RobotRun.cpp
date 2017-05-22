@@ -115,11 +115,11 @@ int main() {
   bool debug = true;
   init();
   
-  /*
+  
   //Q1 open gate logic
   gateSequence();
   sleep1(1,0);
-  */
+  
   
   //Q2 follow line logic
   char Q2 = 0;
