@@ -172,14 +172,14 @@ int seeRedLine(int Y){
 	char redDetectionLimit = 127;
 	int redTotal;
 	char w;
-	char i;
+	int i;
 	for (i = -160; i<160; i++){
-		w = get_pixel(Y, i+160, color)
+		w = get_pixel(Y, i+160, color);
 		if (w>redDetectionLimit){
 			totalRed++;
 		}
 	}
-	if (totalRed>30){
+	if (redTotal>90){
 		return 100002;
 	}
 	else{
