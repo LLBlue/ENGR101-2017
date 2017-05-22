@@ -197,10 +197,12 @@ int main() {
       setSpeed(lineError*speedMultiplier) ;
       sleep1(0,10000);
     }
+	  /*
 	  redLineValue = seeRedLine(linePositionX);
 	  if (redLineValue == 100002){
 		Q3 = 1;
 	  }
+	  */
   }
   
   /*
