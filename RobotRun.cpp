@@ -115,11 +115,11 @@ int main() {
   bool debug = true;
   init();
   
-  
+  /*
   //Q1 open gate logic
   gateSequence();
   sleep1(1,0);
-  
+  */
   
   //Q2 follow line logic
   char Q2 = 0;
@@ -140,7 +140,7 @@ int main() {
     }
   }
   
-  
+  /*
   //Q3 solve line maze
   //need to make it check for a red square at some point for Q4
   double speedMultiplier = 0.95; //change this during testing
@@ -224,6 +224,7 @@ int main() {
 		//Sleep
 	}
 
+*/
   
   
   return 0;
