@@ -140,7 +140,7 @@ int main() {
     }
   }
   
-  /*
+  
   //Q3 solve line maze
   //need to make it check for a red square at some point for Q4
   double speedMultiplier = 0.95; //change this during testing
@@ -198,7 +198,7 @@ int main() {
     }
   }
   
-  
+  /*
   //Q4 solve wall maze
   
 	int wallFront;
