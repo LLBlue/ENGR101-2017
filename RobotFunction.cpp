@@ -251,7 +251,7 @@ int testSee() {
 			set_pixel(x, y, w, w, w);
 		}
 	}
-	display_picture(5,0);
+	display_picture(10,0);
 	return 0;
 }
 
