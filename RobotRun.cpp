@@ -112,7 +112,7 @@ int  main(){
 */
 
 int main() {
-  bool debug = true;
+  bool debug = false;
   init();
   
   
@@ -150,6 +150,7 @@ int main() {
   int lineError;
   int lineOutputLeft;
   int lineOutputRight;
+  int redLineValue;
   char Q3 = 0;
   while(Q3==0) {
     lineError = seeLineX(linePositionX);
@@ -169,13 +170,13 @@ int main() {
       if(lineOutputLeft != 100000) {
         //turn left
         if(debug){
-	  printf("turning left\n");
+	        printf("turning left\n");
         }
         turnLeft(0, 625000);
       } else if (lineOutputRight !=100000) {
         //turn right
         if(debug){
-  	  printf("turning right\n");
+  	      printf("turning right\n");
         }
         turnRight(0, 625000);
       } else {
@@ -196,6 +197,10 @@ int main() {
       setSpeed(lineError*speedMultiplier) ;
       sleep1(0,10000);
     }
+	  redLineValue = seeRedLine(linePositionX);
+	  if (redLineValue == 100002){
+		Q3 = 1;
+	  }
   }
   
   /*
