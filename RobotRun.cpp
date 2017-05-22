@@ -177,7 +177,7 @@ int main() {
         if(debug){
   	  printf("turning right\n");
         }
-        turnRight(1, 250000);
+        turnRight(0, 625000);
       } else {
         //turn around
         turnLeft(1, 250000);
