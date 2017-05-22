@@ -165,6 +165,27 @@ int gateSequence (){
 	return 0; 
 }
 
+//Checking for red line
+int seeRedLine(int Y){
+	take_picture();
+	char color = 0;
+	char redDetectionLimit = 127;
+	int redTotal;
+	char w;
+	char i;
+	for (i = -160; i<160; i++){
+		w = get_pixel(Y, i+160, color)
+		if (w>redDetectionLimit){
+			totalRed++;
+		}
+	}
+	if (totalRed>30){
+		return 100002;
+	}
+	else{
+		return 0'
+	}
+}
 /*
 
 //Checking if wall on left
