@@ -11,7 +11,7 @@ int gateSequence ();
 int detectLeftWall();
 int detectRightWall();
 int seeWallFront();
-int seeRedLine(int Y)
+int seeRedLine(int Y);
 int testSee();
 int testPrint();
 #endif
