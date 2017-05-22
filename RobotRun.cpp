@@ -7,6 +7,7 @@
 
 /* Test things
 */
+/*
 int  main(){
   bool debug = true;
   init();
@@ -105,10 +106,11 @@ int  main(){
    
   return  0;
 }
+*/
 
 /* Real Code
 */
-/*
+
 int main() {
   bool debug = true;
   init();
@@ -226,5 +228,5 @@ int main() {
   
   return 0;
 }
-*/
+
 
