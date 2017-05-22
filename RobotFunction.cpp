@@ -176,7 +176,7 @@ int seeRedLine(int Y){
 	for (i = -160; i<160; i++){
 		w = get_pixel(Y, i+160, color);
 		if (w>redDetectionLimit){
-			totalRed++;
+			redTotal++;
 		}
 	}
 	if (redTotal>90){
