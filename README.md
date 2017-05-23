@@ -39,7 +39,7 @@ All: Make bullet point framework for report
 
 Angus: Draw robot diagram, mount side IR, upload design documents
 
-Audrey: Organize github wiki(done), Add ID control, Make stop script(done) Make batch delete script(done)
+Audrey: Organize github wiki(done), Add ID control, Make stop script(done) Make batch delete script(done), fix see red error (completed), fix turning (completed)
 
 Ryan: See red patch, fix col/row mixup, fix negative speed error, fix follow line
 
