@@ -110,7 +110,6 @@ int main() {
 	  if (redLineValue == 100002){
 		Q3 = 1;
 	  }
-	  
   }
   
   /*
@@ -145,7 +144,7 @@ int main() {
 
 */
   
-  
+  stop(1);
   return 0;
 }
 
