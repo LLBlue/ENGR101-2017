@@ -180,7 +180,7 @@ int seeRedLine(int Y){
 	for (i = -160; i<160; i++){
 		w = get_pixel(Y, i+160, red);
 		x = get_pixel(Y, i+160, white);
-		if (w>redDetectionLimit && x<whiteDetectionLimie){
+		if (w>redDetectionLimit && x<whiteDetectionLimit){
 			redTotal++;
 		}
 	}
