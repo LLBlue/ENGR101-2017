@@ -1,6 +1,10 @@
 # ENGR101-2017
 C++ code for controlling Raspberry Pi 2s in ENGR101 during 2017
 
+Analog 1: front  
+Analog 2: left  
+Analog 3: right  
+
 Pi IP: 10.140.30.210
 
 cat ~/.bash_aliases
