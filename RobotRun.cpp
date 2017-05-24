@@ -5,11 +5,18 @@
 
 /* Test things
 */
+int main() {
+	init();
+  printf("Channel 0: %d\n", read_analog(0));
+	printf("Channel 7: %d\n", read_analog(7));
+  return 0;
+}
+
 
 
 /* Real Code
 */
-
+/*
 int main() {
   bool debug = false;
   init();
@@ -112,7 +119,7 @@ int main() {
 	  }
   }
   
-  /*
+  
   //Q4 solve wall maze
   
 	int wallFront;
@@ -142,10 +149,10 @@ int main() {
 		//Sleep
 	}
 
-*/
+
   
   stop(1);
   return 0;
 }
 
-
+*/
