@@ -4,13 +4,13 @@
 
 /*Takes a given number of readings from IR sensor and averages them
  */
-int seeIR() {
+int seeIR(int channel) {
   int IR;
   int count = 5; //how many readings?
   int i = 0;
   int totalReading = 0;
   while (i<count) {
-    IR = read_analog(0);
+    IR = read_analog(channel);
     totalReading = totalReading + IR;
     sleep1(0,100);
     i++;
