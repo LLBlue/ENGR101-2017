@@ -170,8 +170,8 @@ int seeRedLine(int Y){
 	take_picture();
 	char red = 0;
 	char white = 3;
-	int redDetectionLimit = 127;
-	int whiteDetectionLimt = 127;
+	char redDetectionLimit = 127;
+	char whiteDetectionLimt = 127;
 	int redTotal;
 	int redDetected = 90;
 	char w;
@@ -180,7 +180,7 @@ int seeRedLine(int Y){
 	for (i = -160; i<160; i++){
 		w = get_pixel(Y, i+160, red);
 		x = get_pixel(Y, i+160, white);
-		if (w>redDetectionLimit && x<whiteDetectionLimit){
+		if (w>redDetectionLimit && x<whiteDetectionLimt){
 			redTotal++;
 		}
 	}
