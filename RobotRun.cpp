@@ -8,6 +8,12 @@
 int main() {
 	init();
   printf("Channel 0: %d\n", read_analog(0));
+	printf("Channel 1: %d\n", read_analog(1));
+	printf("Channel 2: %d\n", read_analog(2));
+	printf("Channel 3: %d\n", read_analog(3));
+	printf("Channel 4: %d\n", read_analog(4));
+	printf("Channel 5: %d\n", read_analog(5));
+	printf("Channel 6: %d\n", read_analog(6));
 	printf("Channel 7: %d\n", read_analog(7));
   return 0;
 }
