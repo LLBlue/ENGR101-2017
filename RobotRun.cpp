@@ -28,19 +28,24 @@ int main() {
 				turnRightIR();
 			}
 		} else {
-	    double speedMultiplier = .5; //change this during testing
-      wallLeft = seeIR(2); //Checks distance of wall at left
-	    wallRight = seeIR(3); //Checks distance of wall at right
-      int lineError = wallRight - wallLeft; //positive means closer to right negative means closer to left 
-      int speedGo = int ((double)lineError*speedMultiplier);
-      setSpeedSlow(speedGo);
-      sleep1(0,10000);
-    
+			set_motor(1, 80);
+  			sleep1(0, 100);
+  			set_motor(2, 80);
+  			sleep1(0, 100000);
+			/*
+	    		double speedMultiplier = .5; //change this during testing
+		    	wallLeft = seeIR(2); //Checks distance of wall at left
+			wallRight = seeIR(3); //Checks distance of wall at right		
+			int lineError = wallRight - wallLeft; //positive means closer to right negative means closer to left 
+      			int speedGo = int ((double)lineError*speedMultiplier);
+     			setSpeedSlow(speedGo);
+      			sleep1(0,10000);
+			*/
 		}
-	  	redLineValue = seeRedLine(linePositionX);
-	  	if (redLineValue == 100002){
-			stop(1); //red = stop for now
-	  }
+	  	//redLineValue = seeRedLine(linePositionX);
+	  	//if (redLineValue == 100002){
+		//	stop(1); //red = stop for now
+	 	//}
 	}
 
 	return 0;
