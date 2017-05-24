@@ -8,7 +8,7 @@
 int main() {
 	init();
 	while(true) {
-  		printf("Channel 0: %d\n", read_analog(0));
+  		printf("Channel 1: %d\n", read_analog(1));
 		sleep1(0, 100000);
 	}
 		
