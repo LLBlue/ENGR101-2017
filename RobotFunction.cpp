@@ -145,6 +145,22 @@ int setSpeed (int speedFactor) {
   return 0;
 }
 
+/*Set Speed Slow
+ * Input: speed factor (left negative, right positive)
+ * Changes speed to turn at that rate
+ * Test which motor to + or -
+ * Slower One
+ */
+
+int setSpeedSlow (int speedFactor) {
+  int cruiseControlForCool = 75; //change to modify normal travel speed
+  set_motor(1, cruiseControlForCool + speedFactor);
+  sleep1(0, 100);
+  set_motor(2, cruiseControlForCool - speedFactor);
+  sleep1(0, 100);
+  return 0;
+}
+
 
 /*Connects to gate server
  *Loops until it works
