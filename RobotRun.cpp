@@ -10,6 +10,8 @@ int main() {
 	int wallFront;
 	int wallLeft;
 	int wallRight;
+	int redLineValue;
+	int linePositionX = 120;
 	char Q4 = 0;
 	while(Q4 == 0){
 		int wallFront = seeIR(0); //Checks distance of wall in front
