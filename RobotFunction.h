@@ -3,6 +3,8 @@
 int seeIR(int channel);
 int turnLeft (int seconds, int microseconds);
 int turnRight (int seconds, int microseconds);
+int turnLeftIR();
+int turnRightIR();
 int slowBackward(int timeSeconds, int timeMicroseconds);
 int seeLineX(int Y);
 int seeLineY(int X);
