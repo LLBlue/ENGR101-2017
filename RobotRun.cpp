@@ -16,96 +16,31 @@ int main() {
 	while(Q4 == 0){
 		int wallFront = seeIR(1); //Checks distance of wall in front
 		if(wallFront >= 520){ //520 is distance we want to turn at
-			int wallLeft = seeIR(2); //Checks distance of wall at left
-			int wallRight = seeIR(3); //Checks distance of wall at right
+			wallLeft = seeIR(2); //Checks distance of wall at left
+			wallRight = seeIR(3); //Checks distance of wall at right
 			if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
-				int maxDiff = 50;
-				int dist3 = 3000;
-				int dist2 = 2000;
-				int dist1 = 1000;
-				int dist0;
-				int diff2;
-				int diff1;
-				int diff0;
-				char turning = 0;
-				while (turning == 0) {
-					dist0 = seeIR(1);
-					diff2 = dist2-dist3;
-					diff1 = dist1-dist2;
-					diff0 = dist0-dist1;
-					if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
-						turning = 1; //finished turning if all the differences are close enough
-					} else {
-						turnLeft(0, 50000);
-					}
-					dist3 = dist2;
-					dist2 = dist1;
-					dist1 = dist0;
-				}
+				turnLeftIR();
 			}
 			else if (wallLeft < 400){ //Turn left
-				int maxDiff = 50;
-				int dist3 = 3000;
-				int dist2 = 2000;
-				int dist1 = 1000;
-				int dist0;
-				int diff2;
-				int diff1;
-				int diff0;
-				char turning = 0;
-				while (turning == 0) {
-					dist0 = seeIR(1);
-					diff2 = dist2-dist3;
-					diff1 = dist1-dist2;
-					diff0 = dist0-dist1;
-					if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
-						turning = 1; //finished turning if all the differences are close enough
-					} else {
-						turnLeft(0, 50000);
-					}
-					dist3 = dist2;
-					dist2 = dist1;
-					dist1 = dist0;
-				}
-				
+				turnLeftIR();
 			}
 			else if (wallRight < 400){ //Code for if wall on left but not right
-				int maxDiff = 50;
-				int dist3 = 3000;
-				int dist2 = 2000;
-				int dist1 = 1000;
-				int dist0;
-				int diff2;
-				int diff1;
-				int diff0;
-				char turning = 0;
-				while (turning == 0) {
-					dist0 = seeIR(1);
-					diff2 = dist2-dist3;
-					diff1 = dist1-dist2;
-					diff0 = dist0-dist1;
-					if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
-						turning = 1; //finished turning if all the differences are close enough
-					} else {
-						turnRight(0, 50000);
-					}
-					dist3 = dist2;
-					dist2 = dist1;
-					dist1 = dist0;
-				}
+				turnRightIR();
 			}
 		} else {
-			set_motor(1, 75);
-			  sleep1(0, 100);
-  			set_motor(2, 75);
- 			 sleep1(0, 100000);
+	    double speedMultiplier = .5; //change this during testing
+      wallLeft = seeIR(2); //Checks distance of wall at left
+	    wallRight = seeIR(3); //Checks distance of wall at right
+      int lineError = wallRight - wallLeft; //positive means closer to right negative means closer to left 
+      int speedGo = int ((double)lineError*speedMultiplier);
+      setSpeedSlow(speedGo);
+      sleep1(0,10000);
+    
 		}
-		redLineValue = seeRedLine(linePositionX);
+	  	redLineValue = seeRedLine(linePositionX);
 	  	if (redLineValue == 100002){
 			stop(1); //red = stop for now
-	  	}
-		//Go forward
-		//Sleep
+	  }
 	}
 
 	return 0;
