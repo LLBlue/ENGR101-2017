@@ -9,6 +9,8 @@ int main() {
 	init();
 	while(true) {
   		printf("Channel 1: %d\n", read_analog(1));
+		printf("Channel 2: %d\n", read_analog(2));
+		printf("Channel 3: %d\n", read_analog(3));
 		sleep1(0, 100000);
 	}
 		
