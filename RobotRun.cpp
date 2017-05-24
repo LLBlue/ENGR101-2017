@@ -14,7 +14,7 @@ int main() {
 	int linePositionX = 120;
 	char Q4 = 0;
 	while(Q4 == 0){
-		int wallFront = seeIR(0); //Checks distance of wall in front
+		int wallFront = seeIR(1); //Checks distance of wall in front
 		if(wallFront >= 520){ //520 is distance we want to turn at
 			int wallLeft = seeIR(2); //Checks distance of wall at left
 			int wallRight = seeIR(3); //Checks distance of wall at right
@@ -27,6 +27,11 @@ int main() {
 			else if (wallRight < 400){ //Code for if wall on left but not right
 				turnRight(0, 625000);
 			}
+		} else {
+			set_motor(1, 75);
+			  sleep1(0, 100);
+  			set_motor(2, 75);
+ 			 sleep1(0, 100000);
 		}
 		redLineValue = seeRedLine(linePositionX);
 	  	if (redLineValue == 100002){
