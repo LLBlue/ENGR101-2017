@@ -48,6 +48,56 @@ int turnRight (int seconds, int microseconds) {
   	return 0;
 }
 
+int turnLeftIR() {
+	int maxDiff = 50;
+	int dist3 = 3000;
+	int dist2 = 2000;
+	int dist1 = 1000;
+	int dist0;
+	int diff2;
+	int diff1;
+	int diff0;
+	while (true) {
+			dist0 = seeIR(1);
+			diff2 = dist2-dist3;
+			diff1 = dist1-dist2;
+			diff0 = dist0-dist1;
+			if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
+				return 0;
+			} else {
+				turnLeft(0, 50000);
+			}
+		  dist3 = dist2;
+			dist2 = dist1;
+			dist1 = dist0;
+	}
+}
+
+int turnRightIR() {
+	int maxDiff = 50;
+	int dist3 = 3000;
+	int dist2 = 2000;
+	int dist1 = 1000;
+	int dist0;
+	int diff2;
+	int diff1;
+	int diff0;
+	while (true) {
+			dist0 = seeIR(1);
+			diff2 = dist2-dist3;
+			diff1 = dist1-dist2;
+			diff0 = dist0-dist1;
+			if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
+				return 0;
+			} else {
+				turnRight(0, 50000);
+			}
+		  dist3 = dist2;
+			dist2 = dist1;
+			dist1 = dist0;
+	}
+}
+
 /*Goes backwards slowly at given speed
  */
 int slowBackward(int timeSeconds, int timeMicroseconds) {
