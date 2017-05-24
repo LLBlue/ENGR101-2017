@@ -21,11 +21,56 @@ int main() {
 			if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
 				turnLeft(1, 25000); //Turns left twice at wall
 			}
-			else if (wallLeft < 400){ //Turn left once
-				turnLeft(0, 625000);
+			else if (wallLeft < 400){ //Turn left
+				int maxDiff = 50;
+				int dist3 = 3000;
+				int dist2 = 2000;
+				int dist1 = 1000;
+				int dist0;
+				int diff2;
+				int diff1;
+				int diff0;
+				char turning = 0;
+				while (turning == 0) {
+					dist0 = seeIR(1);
+					diff2 = dist2-dist3;
+					diff1 = dist1-dist2;
+					diff0 = dist0-dist1;
+					if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
+						turning = 1; //finished turning if all the differences are close enough
+					} else {
+						turnLeft(0, 50000);
+					}
+					dist3 = dist2;
+					dist2 = dist1;
+					dist1 = dist0;
+				}
+				
 			}
 			else if (wallRight < 400){ //Code for if wall on left but not right
-				turnRight(0, 625000);
+				int maxDiff = 50;
+				int dist3 = 3000;
+				int dist2 = 2000;
+				int dist1 = 1000;
+				int dist0;
+				int diff2;
+				int diff1;
+				int diff0;
+				char turning = 0;
+				while (turning == 0) {
+					dist0 = seeIR(1);
+					diff2 = dist2-dist3;
+					diff1 = dist1-dist2;
+					diff0 = dist0-dist1;
+					if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
+						turning = 1; //finished turning if all the differences are close enough
+					} else {
+						turnRight(0, 50000);
+					}
+					dist3 = dist2;
+					dist2 = dist1;
+					dist1 = dist0;
+				}
 			}
 		} else {
 			set_motor(1, 75);
