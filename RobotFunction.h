@@ -7,6 +7,7 @@ int slowBackward(int timeSeconds, int timeMicroseconds);
 int seeLineX(int Y);
 int seeLineY(int X);
 int setSpeed(int speedFactor);
+int setSpeedSlow (int speedFactor);
 int gateSequence ();
 int detectLeftWall();
 int detectRightWall();
