@@ -17,13 +17,13 @@ int main() {
 			int wallLeft = seeIR(2); //Checks distance of wall at left
 			int wallRight = seeIR(3); //Checks distance of wall at right
 			if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
-				turn_left(1, 25000); //Turns left twice at wall
+				turnLeft(1, 25000); //Turns left twice at wall
 			}
 			else if (wallLeft < 400){ //Turn left once
-				turn_left(0, 625000);
+				turnLeft(0, 625000);
 			}
 			else if (wallRight < 400){ //Code for if wall on left but not right
-				turn_right(0, 625000);
+				turnRight(0, 625000);
 			}
 		}
 		redLineValue = seeRedLine(linePositionX);
