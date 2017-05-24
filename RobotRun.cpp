@@ -73,7 +73,7 @@ int main() {
         }
         turnLeft(0, 100000);
         while(seeLineX(linePositionX)== 100000 || seeLineX(linePositionX) <= -10) {
-          turnLeft(0, 10000);
+          turnLeft(0, 30000);
         }
       } else if (lineOutputRight !=100000) {
         //turn right
@@ -82,13 +82,13 @@ int main() {
         }
         turnRight(0, 100000);
         while(seeLineX(linePositionX)== 100000 || seeLineX(linePositionX) >= 10) {
-          turnRight(0, 10000);
+          turnRight(0, 30000);
         }
       } else {
         //turn around
         turnRight(0, 100000);
         while(seeLineX(linePositionX)== 100000 || seeLineX(linePositionX) >= 10) {
-          turnRight(0, 10000);
+          turnRight(0, 30000);
         }
         if(debug){
           printf("turning around\n");
