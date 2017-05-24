@@ -170,8 +170,8 @@ int seeRedLine(int Y){
 	take_picture();
 	char red = 0;
 	char white = 3;
-	char redDetectionLimit = 127;
-	char whiteDetectionLimt = 127;
+	int redDetectionLimit = 127;
+	int whiteDetectionLimt = 127;
 	int redTotal;
 	int redDetected = 90;
 	char w;
