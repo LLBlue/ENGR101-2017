@@ -102,7 +102,7 @@ int main() {
       if(debug){
        printf("going straigt\n");
       }
-      setSpeed(lineError*speedMultiplier) ;
+      setSpeedSlow(lineError*speedMultiplier) ;
       sleep1(0,10000);
     }
 	  
