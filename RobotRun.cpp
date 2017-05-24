@@ -7,14 +7,34 @@
 */
 int main() {
 	init();
-	while(true) {
-  		printf("Channel 1: %d\n", read_analog(1));
-		printf("Channel 2: %d\n", read_analog(2));
-		printf("Channel 3: %d\n", read_analog(3));
-		sleep1(0, 100000);
+	int wallFront;
+	int wallLeft;
+	int wallRight;
+	char Q4 = 0;
+	while(Q4 == 0){
+		int wallFront = seeIR(0); //Checks distance of wall in front
+		if(wallFront >= 520){ //520 is distance we want to turn at
+			int wallLeft = seeIR(2); //Checks distance of wall at left
+			int wallRight = seeIR(3); //Checks distance of wall at right
+			if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
+				turn_left(1, 25000); //Turns left twice at wall
+			}
+			else if (wallLeft < 400){ //Turn left once
+				turn_left(0, 625000);
+			}
+			else if (wallRight < 400){ //Code for if wall on left but not right
+				turn_right(0, 625000);
+			}
+		}
+		redLineValue = seeRedLine(linePositionX);
+	  	if (redLineValue == 100002){
+			stop(1); //red = stop for now
+	  	}
+		//Go forward
+		//Sleep
 	}
-		
-		return 0;
+
+	return 0;
 }
 
 
