@@ -17,7 +17,7 @@ int main() {
 	while(Q4 == 0){
 		printf("Wall Fromt: %d\n", wallFront);
 		int wallFront = seeIR(2); //Checks distance of wall in front
-		if(wallFront >= 400){ //520 is distance we want to turn at
+		if(wallFront >= 320){ //520 is distance we want to turn at
 			printf("Close");
 			printf("Wall Fromt: %d\n", wallFront);
 			wallLeft = seeIR(3); //Checks distance of wall at left
