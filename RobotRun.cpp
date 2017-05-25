@@ -11,7 +11,7 @@ int main() {
 	sleep1(1, 0);
 	turnLeft(1, 0);
 	turnRight(1, 0);
-	slowBackwards(1, 0);
+	slowBackward(1, 0);
 	stop(1);
 	return 0;
 }
