@@ -65,7 +65,7 @@ int turnLeftIR() {
 			if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
 				return 0;
 			} else {
-				turnLeft(0, 100000);
+				turnLeft(0, 75000);
 			}
 		  dist3 = dist2;
 			dist2 = dist1;
@@ -90,7 +90,7 @@ int turnRightIR() {
 			if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
 				return 0;
 			} else {
-				turnRight(0, 100000);
+				turnRight(0, 75000);
 			}
 		  dist3 = dist2;
 			dist2 = dist1;
