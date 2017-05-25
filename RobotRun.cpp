@@ -129,17 +129,17 @@ int main() {
 			//	turnLeftIR();
 			//}
 			if (wallLeft < 200){ //Turn left
-				turnLeftIR();
+				turnRightIR();
 			}
 			else if (wallRight < 200){ //Code for if wall on left but not right
-				turnRightIR();
+				turnLeftIR();
 			}
 		} else {
 			
 			
-			set_motor(1, 120);
+			set_motor(1, 80);
   			sleep1(0, 100);
-  			set_motor(2, 120);
+  			set_motor(2, 80);
   			sleep1(0, 100000);
 			
 			/*
