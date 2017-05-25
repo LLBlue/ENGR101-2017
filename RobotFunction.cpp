@@ -235,18 +235,22 @@ int gateSequence (){
 int seeRedLine(int Y){
 	take_picture();
 	char red = 0;
-	char white = 3;
-	char redDetectionLimit = 127;
-	char whiteDetectionLimt = 127;
+	char green = 1;
+	char blue = 2;
+	char redDetectionLimit = 150;
+	char greenDetectionLimit = 100;
+	char blueDerectionLimit = 100;
 	int redTotal;
 	int redDetected = 90;
-	char w;
-	char x;
+	char r;
+	char g;
+	char b;
 	int i;
 	for (i = -160; i<160; i++){
-		w = get_pixel(Y, i+160, red);
-		x = get_pixel(Y, i+160, white);
-		if (w>redDetectionLimit && x<whiteDetectionLimt){
+		r = get_pixel(Y, i+160, red);
+		g = get_pixel(Y, i+160, green);
+		b = get_pixel(Y, i+160, blue);
+		if (r>redDetectionLimit && g<greenDetectionLimt && b<blueDetectionLimit){
 			redTotal++;
 		}
 	}
