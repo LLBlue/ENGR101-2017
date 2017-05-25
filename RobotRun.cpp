@@ -24,10 +24,10 @@ int main(){
 			//	turnLeftIR();
 			//}
 			if (wallLeft < wallRight){ //Turn left
-				turnRightIR();
+				turnLeftIR();
 			}
 			else if (wallRight < wallLeft){ //Code for if wall on left but not right
-				turnLeftIR();
+				turnRightIR();
 			}
 		} else {
 			
