@@ -148,12 +148,12 @@ int main() {
 				turnRightIR();
 			}
 		} else {
-			/*
+			
 			set_motor(1, 120);
   			sleep1(0, 100);
   			set_motor(2, 120);
   			sleep1(0, 100000);
-			*/
+			
 			
 	    		double speedMultiplier = .5; //change this during testing
 		    	wallLeft = seeIR(2); //Checks distance of wall at left
