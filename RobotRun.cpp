@@ -113,8 +113,8 @@ int main() {
 	int wallFront;
 	int wallLeft;
 	int wallRight;
-	int redLineValue;
-	int linePositionX = 120;
+	//int redLineValue;
+	linePositionX = 120;
 	char Q4 = 0;
 	while(Q4 == 0){
 		wallFront = seeIR(2); //Checks distance of wall in front
