@@ -7,49 +7,11 @@
 */
 int main() {
 	init();
-	int wallFront;
-	int wallLeft;
-	int wallRight;
-	int redLineValue;
-	int linePositionX = 120;
-	char Q4 = 0;
-	while(Q4 == 0){
-		int wallFront = seeIR(1); //Checks distance of wall in front
-		if(wallFront >= 520){ //520 is distance we want to turn at
-			wallLeft = seeIR(2); //Checks distance of wall at left
-			wallRight = seeIR(3); //Checks distance of wall at right
-			if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
-				turnLeftIR();
-			}
-			else if (wallLeft < 400){ //Turn left
-				turnLeftIR();
-			}
-			else if (wallRight < 400){ //Code for if wall on left but not right
-				turnRightIR();
-			}
-		} else {
-			/*
+	
 			set_motor(1, 120);
   			sleep1(0, 100);
   			set_motor(2, 120);
-  			sleep1(0, 100000);
-			*/
-			
-	    		double speedMultiplier = .5; //change this during testing
-		    	wallLeft = seeIR(2); //Checks distance of wall at left
-			wallRight = seeIR(3); //Checks distance of wall at right		
-			int lineError = wallRight - wallLeft; //positive means closer to right negative means closer to left 
-      			int speedGo = int ((double)lineError*speedMultiplier);
-     			setSpeedSlow(speedGo);
-      			sleep1(0,10000);
-			
-		}
-	  	//redLineValue = seeRedLine(linePositionX);
-	  	//if (redLineValue == 100002){
-		//	stop(1); //red = stop for now
-	 	//}
-	}
-
+  			sleep1(5, 0);
 	return 0;
 }
 
@@ -163,32 +125,54 @@ int main() {
   
   //Q4 solve wall maze
   
+	int main() {
+	init();
 	int wallFront;
 	int wallLeft;
 	int wallRight;
+	int redLineValue;
+	int linePositionX = 120;
 	char Q4 = 0;
 	while(Q4 == 0){
-		int wallFront = seeWallFront(); //Checks if wall in front
-		if(wallFront == 1){
-			int wallLeft = seeWallLeft(); //Checks if wall at left
-			int wallRight = seeWallRight(); //Checks if wall at right
-			if (wallLeft == 1 && wallRight == 1){
-				turn_left(1, 25000); //Turns left twice at wall
+		int wallFront = seeIR(1); //Checks distance of wall in front
+		if(wallFront >= 520){ //520 is distance we want to turn at
+			wallLeft = seeIR(2); //Checks distance of wall at left
+			wallRight = seeIR(3); //Checks distance of wall at right
+			if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
+				turnLeftIR();
 			}
-			else if (wallLeft == 0){ //Code for if no wall on left
-				turn_left(0, 625000);
+			else if (wallLeft < 400){ //Turn left
+				turnLeftIR();
 			}
-			else if (wallLeft == 1 && wallRight == 0){ //Code for if wall on left but not right
-				turn_right(0, 625000);
+			else if (wallRight < 400){ //Code for if wall on left but not right
+				turnRightIR();
 			}
+		} else {
+			/*
+			set_motor(1, 120);
+  			sleep1(0, 100);
+  			set_motor(2, 120);
+  			sleep1(0, 100000);
+			*/
+			
+	    		double speedMultiplier = .5; //change this during testing
+		    	wallLeft = seeIR(2); //Checks distance of wall at left
+			wallRight = seeIR(3); //Checks distance of wall at right		
+			int lineError = wallRight - wallLeft; //positive means closer to right negative means closer to left 
+      			int speedGo = int ((double)lineError*speedMultiplier);
+     			setSpeedSlow(speedGo);
+      			sleep1(0,10000);
+			
 		}
-		redLineValue = seeRedLine(linePositionX);
-	  	if (redLineValue == 100002){
-		sleep1(0, 500000)'
-	  }
-		//Go forward
-		//Sleep
+	  	//redLineValue = seeRedLine(linePositionX);
+	  	//if (redLineValue == 100002){
+		//	stop(1); //red = stop for now
+	 	//}
 	}
+
+	return 0;
+
+
 
 
   
