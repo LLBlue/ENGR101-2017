@@ -15,10 +15,10 @@ int main() {
 	int linePositionX = 120;
 	char Q4 = 0;
 	while(Q4 == 0){
-		int wallFront = seeIR(1); //Checks distance of wall in front
+		int wallFront = seeIR(2); //Checks distance of wall in front
 		if(wallFront >= 520){ //520 is distance we want to turn at
-			wallLeft = seeIR(2); //Checks distance of wall at left
-			wallRight = seeIR(3); //Checks distance of wall at right
+			wallLeft = seeIR(3); //Checks distance of wall at left
+			wallRight = seeIR(1); //Checks distance of wall at right
 			if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
 				turnLeftIR();
 			}
@@ -38,8 +38,8 @@ int main() {
 			
 			/*
 	    		double speedMultiplier = .5; //change this during testing
-		    	wallLeft = seeIR(2); //Checks distance of wall at left
-			wallRight = seeIR(3); //Checks distance of wall at right		
+		    	wallLeft = seeIR(3); //Checks distance of wall at left
+			wallRight = seeIR(1); //Checks distance of wall at right		
 			int lineError = wallRight - wallLeft; //positive means closer to right negative means closer to left 
       			int speedGo = int ((double)lineError*speedMultiplier);
      			setSpeedSlow(speedGo);
