@@ -48,7 +48,7 @@ int turnRight (int seconds, int microseconds) {
   	return 0;
 }
 
-int turnLeftIR() {
+int turnRightIR() {
 	int maxDiff = 50;
 	int dist3 = 3000;
 	int dist2 = 2000;
@@ -67,13 +67,13 @@ int turnLeftIR() {
 			} else {
 				turnLeft(0, 100000);
 			}
-		  dist3 = dist2;
+			dist3 = dist2;
 			dist2 = dist1;
 			dist1 = dist0;
 	}
 }
 
-int turnRightIR() {
+int turnLeftIR() {
 	int maxDiff = 50;
 	int dist3 = 3000;
 	int dist2 = 2000;
