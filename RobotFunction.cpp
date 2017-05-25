@@ -239,7 +239,7 @@ int seeRedLine(int Y){
 	char blue = 2;
 	char redDetectionLimit = 150;
 	char greenDetectionLimit = 100;
-	char blueDerectionLimit = 100;
+	char blueDetectionLimit = 100;
 	int redTotal;
 	int redDetected = 90;
 	char r;
@@ -250,7 +250,7 @@ int seeRedLine(int Y){
 		r = get_pixel(Y, i+160, red);
 		g = get_pixel(Y, i+160, green);
 		b = get_pixel(Y, i+160, blue);
-		if (r>redDetectionLimit && g<greenDetectionLimt && b<blueDetectionLimit){
+		if (r>redDetectionLimit && g<greenDetectionLimit && b<blueDetectionLimit){
 			redTotal++;
 		}
 	}
