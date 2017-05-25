@@ -5,16 +5,8 @@
 
 /* Test things
 */
-int main() {
-	init();
-	while(true) {
-		printf("Middle: %d\n", seeIR(2));
-		sleep1(0, 500000);
-	}
-	return 0;
-}
 
-/*
+
 int main() {
   bool debug = false;
   init();
@@ -128,18 +120,18 @@ int main() {
 	char Q4 = 0;
 	while(Q4 == 0){
 		wallFront = seeIR(2); //Checks distance of wall in front
-		printf("Wall Front: %d\n", wallFront);
+		//printf("Wall Front: %d\n", wallFront);
 		if(wallFront >= 250){ //520 is distance we want to turn at
-			printf("Turning\n");
+			//printf("Turning\n");
 			wallLeft = seeIR(3); //Checks distance of wall at left
 			wallRight = seeIR(1); //Checks distance of wall at right
-			if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
+			//if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
+			//	turnLeftIR();
+			//}
+			if (wallLeft < 200){ //Turn left
 				turnLeftIR();
 			}
-			else if (wallLeft < 400){ //Turn left
-				turnLeftIR();
-			}
-			else if (wallRight < 400){ //Code for if wall on left but not right
+			else if (wallRight < 200){ //Code for if wall on left but not right
 				turnRightIR();
 			}
 		} else {
@@ -158,6 +150,7 @@ int main() {
       			int speedGo = int ((double)lineError*speedMultiplier);
      			setSpeedSlow(speedGo);
       			sleep1(0,10000);
+			*/
 			
 		}
 	  	//redLineValue = seeRedLine(linePositionX);
@@ -167,4 +160,4 @@ int main() {
 	}
 	return 0;
 }
-*/
+
