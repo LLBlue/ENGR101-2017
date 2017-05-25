@@ -7,7 +7,7 @@
 */
 int main() {
 	init();
-	setSpeed(0);
+	setSpeed(50);
 	sleep1(1, 0);
 	turnLeft(1, 0);
 	turnRight(1, 0);
