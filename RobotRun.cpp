@@ -23,10 +23,10 @@ int main(){
 			//if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
 			//	turnLeftIR();
 			//}
-			if (wallLeft < 200){ //Turn left
+			if (wallLeft < wallRight){ //Turn left
 				turnRightIR();
 			}
-			else if (wallRight < 200){ //Code for if wall on left but not right
+			else if (wallRight < wallLeft){ //Code for if wall on left but not right
 				turnLeftIR();
 			}
 		} else {
@@ -37,15 +37,7 @@ int main(){
   			set_motor(2, 80);
   			sleep1(0, 100000);
 			
-			/*
-	    		double speedMultiplier = .5; //change this during testing
-		    	wallLeft = seeIR(3); //Checks distance of wall at left
-			wallRight = seeIR(1); //Checks distance of wall at right		
-			int lineError = wallRight - wallLeft; //positive means closer to right negative means closer to left 
-      			int speedGo = int ((double)lineError*speedMultiplier);
-     			setSpeedSlow(speedGo);
-      			sleep1(0,10000);
-			*/
+			
 			
 		}
 	  	//redLineValue = seeRedLine(linePositionX);
