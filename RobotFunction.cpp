@@ -58,7 +58,7 @@ int turnLeftIR() {
 	int diff1;
 	int diff0;
 	while (true) {
-			dist0 = seeIR(1);
+			dist0 = seeIR(2);
 			diff2 = dist2-dist3;
 			diff1 = dist1-dist2;
 			diff0 = dist0-dist1;
@@ -83,7 +83,7 @@ int turnRightIR() {
 	int diff1;
 	int diff0;
 	while (true) {
-			dist0 = seeIR(1);
+			dist0 = seeIR(2);
 			diff2 = dist2-dist3;
 			diff1 = dist1-dist2;
 			diff0 = dist0-dist1;
