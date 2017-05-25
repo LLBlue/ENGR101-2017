@@ -158,7 +158,7 @@ int main() {
       			int speedGo = int ((double)lineError*speedMultiplier);
      			setSpeedSlow(speedGo);
       			sleep1(0,10000);
-			*/
+			
 		}
 	  	//redLineValue = seeRedLine(linePositionX);
 	  	//if (redLineValue == 100002){
