@@ -18,6 +18,61 @@
 int main() {
   bool debug = false;
   init();
+	while(true){
+		int readingRight = read_analogue(1);
+		int readingMiddle = read_analogue(2);
+		int readingLeft = read_analogue(3);
+		printf("Port 1: %d\n", readingRight);
+		printf("Port 2: %d\n", readingMiddle);
+		printf("Port 3: %d\n", readingLeft);
+	}
+	/*
+	int wallFront;
+	int wallLeft;
+	int wallRight;
+	//int redLineValue;
+	linePositionX = 120;
+	char Q4 = 0;
+	while(Q4 == 0){
+		wallFront = seeIR(2); //Checks distance of wall in front
+		//printf("Wall Front: %d\n", wallFront);
+		if(wallFront >= 200){ //520 is distance we want to turn at
+			//printf("Turning\n");
+			wallLeft = seeIR(3); //Checks distance of wall at left
+			wallRight = seeIR(1); //Checks distance of wall at right
+			//if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
+			//	turnLeftIR();
+			//}
+			if (wallLeft < wallRight){ //Turn left
+				turnLeftIR();
+			}
+			else if (wallRight < wallLeft){ //Code for if wall on left but not right
+				turnRightIR();
+			}
+		} else {
+			
+			
+			set_motor(1, 80);
+  			sleep1(0, 100);
+  			set_motor(2, 80);
+  			sleep1(0, 100000);
+			
+			/*
+	    		double speedMultiplier = .5; //change this during testing
+		    	wallLeft = seeIR(3); //Checks distance of wall at left
+			wallRight = seeIR(1); //Checks distance of wall at right		
+			int lineError = wallRight - wallLeft; //positive means closer to right negative means closer to left 
+      			int speedGo = int ((double)lineError*speedMultiplier);
+     			setSpeedSlow(speedGo);
+      			sleep1(0,10000);
+			*/
+			
+		}
+	  	//redLineValue = seeRedLine(linePositionX);
+	  	//if (redLineValue == 100002){
+		//	stop(1); //red = stop for now
+	 	//}
+	*/
   
   /*
   //Q1 open gate logic
