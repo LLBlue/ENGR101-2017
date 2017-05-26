@@ -48,6 +48,16 @@ int turnRight (int seconds, int microseconds) {
   	return 0;
 }
 
+int turnRightIR(int wallFront) {
+	while (wallFront > 100){ //Needs to find better values for checking
+		set_motor(2, 140);
+		sleep1(0, 100);
+		set_motor(1, -140);
+		sleep1(0,10000);
+		wallFront = seeIR(2);
+}
+
+/*
 int turnRightIR() {
 	int maxDiff = 50;
 	int dist3 = 3000;
@@ -72,7 +82,18 @@ int turnRightIR() {
 			dist1 = dist0;
 	}
 }
+*/
 
+int turnLeftIR(int wallFront) {
+	while (wallFront > 100){ //Needs to find better values for checking
+		set_motor(1, 140);
+		sleep1(0, 100);
+		set_motor(2, -140);
+		sleep1(0,10000);
+		wallFront = seeIR(2);
+}
+
+/*
 int turnLeftIR() {
 	int maxDiff = 50;
 	int dist3 = 3000;
@@ -97,6 +118,7 @@ int turnLeftIR() {
 			dist1 = dist0;
 	}
 }
+*/
 
 /*Goes backwards slowly at given speed
  */
