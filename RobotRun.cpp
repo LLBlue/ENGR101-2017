@@ -47,10 +47,10 @@ int main() {
 			//	turnLeftIR();
 			//}
 			if (wallLeft > 400){ //Turn left (Possibly need smaller value)
-				turnRightIR(wallLeft, wallFront);
+				turnRightIR(wallFront);
 			}
 			else if (wallRight > 400){ //Turn right (Possibly need smaller value)
-				turnLeftIR(wallRight, wallFront);
+				turnLeftIR(wallFront);
 			}
 		} 
 		else {
