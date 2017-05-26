@@ -3,8 +3,6 @@
 #include "E101.h"
 #include "RobotFunction.h"
 
-/* Test things
-*/
 
 
 
@@ -21,7 +19,7 @@ int main() {
   bool debug = false;
   init();
   
-  
+  /*
   //Q1 open gate logic
   gateSequence();
   sleep1(1,0);
@@ -168,6 +166,7 @@ int main() {
 		//	stop(1); //red = stop for now
 	 	//}
 	}
+	*/
 	return 0;
 }
 
