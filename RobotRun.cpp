@@ -18,14 +18,6 @@
 int main() {
   bool debug = false;
   init();
-	while(true){
-		int readingRight = read_analog(1);
-		int readingMiddle = read_analog(2);
-		int readingLeft = read_analog(3);
-		printf("Port 1: %d\n", readingRight);
-		printf("Port 2: %d\n", readingMiddle);
-		printf("Port 3: %d\n", readingLeft);
-	}
 	
 	int wallFront;
 	int wallLeft;
