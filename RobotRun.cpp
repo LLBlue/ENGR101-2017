@@ -53,12 +53,14 @@ int main() {
 						wallRight = seeIR(1);
 					}
 				}else{
+					printf("Going strqaight\n");
 					set_motor(1, 80);
   					sleep1(0, 100);
   					set_motor(2, 80);
   					sleep1(0, 100000);
 					redLineValue = seeRedLine(linePositionX);
 	 				if (redLineValue == 100002){
+						printf("Red Line\n");
 						redLine = true;
 					}
 				}
