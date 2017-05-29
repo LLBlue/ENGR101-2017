@@ -265,7 +265,7 @@ int main() {
 		//	stop(1); //red = stop for now
 	 	//}
 	}
-	*/
+	
 	return 0;
 }
 
