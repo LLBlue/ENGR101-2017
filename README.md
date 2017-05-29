@@ -36,6 +36,18 @@ https://docs.google.com/document/d/1dKe32ZthLgmFeoDCdHdE9qLXTYkRzMfWkC_8AHmjLdg/
 Link to documentation for library;
 https://github.com/kaiwhata/ENGR101-2017/wiki
 
+Week 4 Goals:
+Angus:  
+Print off final chassis parts  
+Draw diagram of robot
+
+Audrey:  
+Run Q3 tests make sure it's functional  
+Make Q4 logic  
+
+Ryan:  
+Make Q4 turning function  
+Test Q3 and Q4  
 
 Week 3 Goals:
 
