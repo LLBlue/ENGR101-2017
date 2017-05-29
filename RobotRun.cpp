@@ -18,15 +18,15 @@ int main() {
 		while(true){
 			wallFront = seeIR(2); //Checks distance of wall in front
 			printf("Wall Front: %d\n", wallFront);
-			if(wallFront >= 320){ //520 is distance we want to turn at
+			if(wallFront >= 280){ //520 is distance we want to turn at
 				printf("Turning\n");
 				wallLeft = seeIR(3); //Checks distance of wall at left
 				wallRight = seeIR(1); //Checks distance of wall at right
 			
-				if (wallLeft > 400){ //Turn left (Possibly need smaller value)
+				if (wallLeft > 320){ //Turn left (Possibly need smaller value)
 					turnRightIR(wallFront);
 				}
-				else if (wallRight > 400){ //Turn right (Possibly need smaller value)
+				else if (wallRight > 320){ //Turn right (Possibly need smaller value)
 					turnLeftIR(wallFront);
 				}
 			} else {
