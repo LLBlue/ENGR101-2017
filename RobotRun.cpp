@@ -65,24 +65,24 @@ int main() {
 					}
 				}
 			}
-			printf("Loop nstuff?\n");
-			set_motor(1, 0);
-			sleep1(0,100);
-			set_motor(2, 0);
-			wallFront = seeIR(2);
-			while(waiting){
-				if(wallFront > 400){ //Need different value
-					while(wallFront > 150){
-						sleep1(0, 20000);
-						wallFront= seeIR(2);
-					}
-					waiting = false;	
-				} else if(wallFront < 151){
-					sleep1(0,20000);	
-				}
-			}
-			redLine = false;		
 		}
+		printf("Loop nstuff?\n");
+		set_motor(1, 0);
+		sleep1(0,100);
+		set_motor(2, 0);
+		wallFront = seeIR(2);
+		while(waiting){
+			if(wallFront > 400){ //Need different value
+				while(wallFront > 150){
+					sleep1(0, 20000);
+					wallFront= seeIR(2);
+				}
+				waiting = false;	
+			} else if(wallFront < 151){
+				sleep1(0,20000);	
+			}
+		}
+		redLine = false;		
 	}	
 	return 0;
 }
