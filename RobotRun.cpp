@@ -39,7 +39,7 @@ int main() {
 		while(!redLine){
 		wallFront = seeIR(2); //Checks distance of wall in front
 		//printf("Wall Front: %d\n", wallFront);
-		if(wallFront >= 200){ //520 is distance we want to turn at
+		if(wallFront >= 320){ //520 is distance we want to turn at
 			//printf("Turning\n");
 			wallLeft = seeIR(3); //Checks distance of wall at left
 			wallRight = seeIR(1); //Checks distance of wall at right
@@ -54,8 +54,8 @@ int main() {
 			}
 		} 
 		else {
-			if(wallLeft > 400){
-				while(wallLeft > 400){
+			if(wallLeft > 650){
+				while(wallLeft > 600){
 					set_motor(2, 140);
 					sleep1(0, 100);
 					set_motor(1, -140);
@@ -64,8 +64,8 @@ int main() {
 				}
 				
 			}
-			if(wallRight > 400){
-				while(wallRight > 400){
+			if(wallRight > 650){
+				while(wallRight > 600){
 					set_motor(1, 140);
 					sleep1(0, 100);
 					set_motor(2, -140);
@@ -89,13 +89,13 @@ int main() {
 		wallFront = seeIR(2);
 		while(waiting){
 			if(wallFront > 400){ //Need different value
-				while(wallFront > 400){
+				while(wallFront > 150){
 					sleep1(0, 20000);
 					wallFront= seeIR(2);
 				}
 				waiting = false;	
 			}
-			else if(wallFront < 401){
+			else if(wallFront < 151){
 				sleep1(0,20000);	
 			}
 		}
