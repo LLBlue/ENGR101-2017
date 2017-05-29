@@ -93,6 +93,7 @@ int turnLeftIR(int wallFront) {
 		sleep1(0,10000);
 		wallFront = seeIR(2);
 }
+}
 
 /*
 int turnLeftIR() {
