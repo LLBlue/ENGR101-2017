@@ -14,8 +14,8 @@ int main() {
 	bool redLine = false;
 	bool waiting = true;
 	char Q4 = 0;
-	while(Q4 == 0){
-		while(!redLine){
+	while(true){
+		while(true){
 			wallFront = seeIR(2); //Checks distance of wall in front
 			printf("Wall Front: %d\n", wallFront);
 			if(wallFront >= 320){ //520 is distance we want to turn at
