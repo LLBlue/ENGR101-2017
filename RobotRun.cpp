@@ -17,14 +17,7 @@
 
 int main() {
 	
-	init();
-	set_motor(1, 200);
-	sleep1(1,0);
-	stop(1);
-	return 0;
-}
 	
-	/*
   bool debug = false;
   init();
 	
@@ -39,9 +32,9 @@ int main() {
 	while(Q4 == 0){
 		while(!redLine){
 		wallFront = seeIR(2); //Checks distance of wall in front
-		//printf("Wall Front: %d\n", wallFront);
+		printf("Wall Front: %d\n", wallFront);
 		if(wallFront >= 320){ //520 is distance we want to turn at
-			//printf("Turning\n");
+			printf("Turning\n");
 			wallLeft = seeIR(3); //Checks distance of wall at left
 			wallRight = seeIR(1); //Checks distance of wall at right
 			//if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
@@ -53,8 +46,7 @@ int main() {
 			else if (wallRight > 400){ //Turn right (Possibly need smaller value)
 				turnLeftIR(wallFront);
 			}
-		} 
-		else {
+		} else {
 			if(wallLeft > 650){
 				while(wallLeft > 600){
 					set_motor(2, 140);
@@ -100,25 +92,10 @@ int main() {
 				sleep1(0,20000);	
 			}
 		}
-		redLine = false;
-			
-			/*
-	    		double speedMultiplier = .5; //change this during testing
-		    	wallLeft = seeIR(3); //Checks distance of wall at left
-			wallRight = seeIR(1); //Checks distance of wall at right		
-			int lineError = wallRight - wallLeft; //positive means closer to right negative means closer to left 
-      			int speedGo = int ((double)lineError*speedMultiplier);
-     			setSpeedSlow(speedGo);
-      			sleep1(0,10000);
-			
-			
+		redLine = false;		
 	}
-	  	//redLineValue = seeRedLine(linePositionX);
-	  	//if (redLineValue == 100002){
-		//	stop(1); //red = stop for now
-	 	//}
 	
-  */
+  
   /*
   //Q1 open gate logic
   gateSequence();
@@ -250,23 +227,11 @@ int main() {
   			set_motor(2, 80);
   			sleep1(0, 100000);
 			
-			/*
-	    		double speedMultiplier = .5; //change this during testing
-		    	wallLeft = seeIR(3); //Checks distance of wall at left
-			wallRight = seeIR(1); //Checks distance of wall at right		
-			int lineError = wallRight - wallLeft; //positive means closer to right negative means closer to left 
-      			int speedGo = int ((double)lineError*speedMultiplier);
-     			setSpeedSlow(speedGo);
-      			sleep1(0,10000);
-			*/
-		/*	
+			
+			
 		}
-	  	//redLineValue = seeRedLine(linePositionX);
-	  	//if (redLineValue == 100002){
-		//	stop(1); //red = stop for now
-	 	//}
 	}
-	
+	*/
 	return 0;
 }
-*/
+
