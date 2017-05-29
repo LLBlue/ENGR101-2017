@@ -4,9 +4,8 @@
 #include "RobotFunction.h"
 
 int main() {
-  bool debug = false;
-  init();
-	
+	bool debug = false;
+	init();
 	int wallFront;
 	int wallLeft;
 	int wallRight;
@@ -17,74 +16,70 @@ int main() {
 	char Q4 = 0;
 	while(Q4 == 0){
 		while(!redLine){
-		wallFront = seeIR(2); //Checks distance of wall in front
-		printf("Wall Front: %d\n", wallFront);
-		if(wallFront >= 320){ //520 is distance we want to turn at
-			printf("Turning\n");
-			wallLeft = seeIR(3); //Checks distance of wall at left
-			wallRight = seeIR(1); //Checks distance of wall at right
-			//if (wallLeft >= 400 && wallRight >= 400){ //more than 400 means wall there
-			//	turnLeftIR();
-			//}
-			if (wallLeft > 400){ //Turn left (Possibly need smaller value)
-				turnRightIR(wallFront);
-			}
-			else if (wallRight > 400){ //Turn right (Possibly need smaller value)
-				turnLeftIR(wallFront);
-			}
-		} else {
-			if(wallLeft > 650){
-				while(wallLeft > 600){
-					set_motor(2, 140);
-					sleep1(0, 100);
-					set_motor(1, -140);
-					sleep1(0,10000);
-					wallLeft = seeIR(3);
+			wallFront = seeIR(2); //Checks distance of wall in front
+			printf("Wall Front: %d\n", wallFront);
+			if(wallFront >= 320){ //520 is distance we want to turn at
+				printf("Turning\n");
+				wallLeft = seeIR(3); //Checks distance of wall at left
+				wallRight = seeIR(1); //Checks distance of wall at right
+			
+				if (wallLeft > 400){ //Turn left (Possibly need smaller value)
+					turnRightIR(wallFront);
 				}
+				else if (wallRight > 400){ //Turn right (Possibly need smaller value)
+					turnLeftIR(wallFront);
+				}
+			} else {
+				if(wallLeft > 650){
+					while(wallLeft > 600){
+						set_motor(2, 140);
+						sleep1(0, 100);
+						set_motor(1, -140);
+						sleep1(0,10000);
+						wallLeft = seeIR(3);
+					}
 				
-			}
-			if(wallRight > 650){
-				while(wallRight > 600){
-					set_motor(1, 140);
-					sleep1(0, 100);
-					set_motor(2, -140);
-					sleep1(0,10000);
-					wallRight = seeIR(1);
+				}
+				if(wallRight > 650){
+					while(wallRight > 600){
+						set_motor(1, 140);
+						sleep1(0, 100);
+						set_motor(2, -140);
+						sleep1(0,10000);
+						wallRight = seeIR(1);
+					}
+				}else{
+					set_motor(1, 80);
+  					sleep1(0, 100);
+  					set_motor(2, 80);
+  					sleep1(0, 100000);
+					redLineValue = seeRedLine(linePositionX);
+	 				if (redLineValue == 100002){
+						redLine = true;
+					}
 				}
 			}
-			else{
-				set_motor(1, 80);
-  				sleep1(0, 100);
-  				set_motor(2, 80);
-  				sleep1(0, 100000);
-				redLineValue = seeRedLine(linePositionX);
-	 			if (redLineValue == 100002){
-				redLine = true;
-			}
-		}
-		set_motor(1, 0);
-		sleep1(0,100);
-		set_motor(2, 0);
-		wallFront = seeIR(2);
-		while(waiting){
-			if(wallFront > 400){ //Need different value
-				while(wallFront > 150){
-					sleep1(0, 20000);
-					wallFront= seeIR(2);
+			set_motor(1, 0);
+			sleep1(0,100);
+			set_motor(2, 0);
+			wallFront = seeIR(2);
+			while(waiting){
+				if(wallFront > 400){ //Need different value
+					while(wallFront > 150){
+						sleep1(0, 20000);
+						wallFront= seeIR(2);
+					}
+					waiting = false;	
+				} else if(wallFront < 151){
+					sleep1(0,20000);	
 				}
-				waiting = false;	
 			}
-			else if(wallFront < 151){
-				sleep1(0,20000);	
-			}
+			redLine = false;		
 		}
-		redLine = false;		
-	}
+	}	
+	return 0;
 }
-			return 0;
 
-	}
-  
 			
 			
 			
