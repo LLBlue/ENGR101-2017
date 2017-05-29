@@ -16,6 +16,15 @@
 
 
 int main() {
+	
+	init();
+	set_motor(1, 200);
+	sleep1(1,0);
+	stop(1);
+	return 0;
+}
+	
+	/*
   bool debug = false;
   init();
 	
@@ -101,7 +110,7 @@ int main() {
       			int speedGo = int ((double)lineError*speedMultiplier);
      			setSpeedSlow(speedGo);
       			sleep1(0,10000);
-			*/
+			
 			
 	}
 	  	//redLineValue = seeRedLine(linePositionX);
@@ -109,7 +118,7 @@ int main() {
 		//	stop(1); //red = stop for now
 	 	//}
 	
-  
+  */
   /*
   //Q1 open gate logic
   gateSequence();
