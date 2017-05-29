@@ -30,6 +30,8 @@ int main() {
 					turnLeftIR(wallFront);
 				}
 			} else {
+				wallLeft = seeIR(3); //Checks distance of wall at left
+				wallRight = seeIR(1); //Checks distance of wall at right
 				if(wallLeft > 650){
 					while(wallLeft > 600){
 						set_motor(2, 140);
