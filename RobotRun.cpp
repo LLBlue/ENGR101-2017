@@ -3,21 +3,7 @@
 #include "E101.h"
 #include "RobotFunction.h"
 
-
-
-
-
-
-
-
-
-
-
-
-
 int main() {
-	
-	
   bool debug = false;
   init();
 	
@@ -94,8 +80,32 @@ int main() {
 		}
 		redLine = false;		
 	}
-	
+	return 0;
+}
   
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
   /*
   //Q1 open gate logic
   gateSequence();
@@ -231,7 +241,7 @@ int main() {
 			
 		}
 	}
-	*/
+	
 	return 0;
 }
 
