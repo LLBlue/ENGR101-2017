@@ -13,11 +13,10 @@ int main() {
 	int linePositionX = 120;
 	bool redLine = false;
 	bool waiting = true;
-	char Q4 = 0;
-	while(Q4==0){
+	while(true){
 		while(!redLine){
 			wallFront = seeIR(2); //Checks distance of wall in front
-			if(wallFront >= 220){ //520 is distance we want to turn at
+			if(wallFront >= 220){ //220 is distance we want to turn at
 				wallLeft = seeIR(3); //Checks distance of wall at left
 				wallRight = seeIR(1); //Checks distance of wall at right
 			
@@ -61,7 +60,7 @@ int main() {
 				}
 			}
 		}
-		printf("Loop nstuff?\n");
+		printf("Red shit\n");
 		set_motor(1, 0);
 		sleep1(0,100);
 		set_motor(2, 0);
@@ -75,7 +74,8 @@ int main() {
 				}
 				waiting = false;	
 			} else if(wallFront < 151){
-				sleep1(0,20000);	
+				sleep1(0,20000);
+				wallFront= seeIR(2);
 				printf("Waiting for gate\n");
 			}
 		}
