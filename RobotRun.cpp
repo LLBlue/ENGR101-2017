@@ -4,11 +4,18 @@
 #include "RobotFunction.h"
 
 int main() {
+	int wallLeft;
+	int wallRight;
+	while(true){
+		wallLeft = seeIR(3); //Checks distance of wall at left
+		wallRight = seeIR(1); //Checks distance of wall at right
+		printf("Input 3: %d\n", wallLeft);
+		printf("Input 1: %d\n", wallRight);
+	}
 	bool debug = false;
 	init();
 	int wallFront;
-	int wallLeft;
-	int wallRight;
+	
 	int redLineValue;
 	int linePositionX = 120;
 	bool redLine = false;
@@ -23,11 +30,13 @@ int main() {
 				wallLeft = seeIR(3); //Checks distance of wall at left
 				wallRight = seeIR(1); //Checks distance of wall at right
 			
-				if (wallLeft > 320){ //Turn left (Possibly need smaller value)
+				if (wallLeft > 200){ //Turn Right (Possibly need smaller value)
 					turnRightIR(wallFront);
+					printf("Turning Right\n");
 				}
-				else if (wallRight > 320){ //Turn right (Possibly need smaller value)
+				else if (wallRight > 200){ //Turn Left (Possibly need smaller value)
 					turnLeftIR(wallFront);
+					printf("Turning Left\n");
 				}
 			} else {
 				wallLeft = seeIR(3); //Checks distance of wall at left
