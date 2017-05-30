@@ -7,16 +7,8 @@ int main() {
 	init();
 	int wallLeft;
 	int wallRight;
-	while(true){
-		wallLeft = seeIR(3); //Checks distance of wall at left
-		wallRight = seeIR(1); //Checks distance of wall at right
-		printf("Input 3: %d\n", wallLeft);
-		printf("Input 1: %d\n", wallRight);
-	}
 	bool debug = false;
-	
 	int wallFront;
-	
 	int redLineValue;
 	int linePositionX = 120;
 	bool redLine = false;
