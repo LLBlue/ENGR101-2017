@@ -30,8 +30,8 @@ int main() {
 			} else {
 				wallLeft = seeIR(3); //Checks distance of wall at left
 				wallRight = seeIR(1); //Checks distance of wall at right
-				if(wallLeft > 550){
-					while(wallLeft > 500){
+				if(wallLeft > 600){
+					while(wallLeft > 550){
 						set_motor(2, 140);
 						sleep1(0, 100);
 						set_motor(1, -140);
@@ -40,8 +40,8 @@ int main() {
 					}
 				
 				}
-				if(wallRight > 550){
-					while(wallRight > 500){
+				if(wallRight > 600){
+					while(wallRight > 550){
 						set_motor(1, 140);
 						sleep1(0, 100);
 						set_motor(2, -140);
@@ -67,7 +67,7 @@ int main() {
 		set_motor(2, 0);
 		wallFront = seeIR(2);
 		while(waiting){
-			if(wallFront > 400){ //Need different value
+			if(wallFront > 200){ //Need different value
 				while(wallFront > 150){
 					sleep1(0, 20000);
 					wallFront= seeIR(2);
