@@ -17,27 +17,21 @@ int main() {
 	while(Q4==0){
 		while(!redLine){
 			wallFront = seeIR(2); //Checks distance of wall in front
-			printf("Wall Front: %d\n", wallFront);
 			if(wallFront >= 220){ //520 is distance we want to turn at
-				printf("Turning\n");
 				wallLeft = seeIR(3); //Checks distance of wall at left
 				wallRight = seeIR(1); //Checks distance of wall at right
 			
 				if (wallLeft > 200){ //Turn Right (Possibly need smaller value)
 					turnRightIR(wallFront);
-					printf("Turning Right\n");
 				}
 				else if (wallRight > 200){ //Turn Left (Possibly need smaller value)
 					turnLeftIR(wallFront);
-					printf("Turning Left\n");
 				}
 			} else {
 				wallLeft = seeIR(3); //Checks distance of wall at left
 				wallRight = seeIR(1); //Checks distance of wall at right
-				printf("Wall Left: %d\n", wallLeft);
-				printf("Wall Right: %d\n", wallRight);
-				if(wallLeft > 500){
-					while(wallLeft > 450){
+				if(wallLeft > 550){
+					while(wallLeft > 500){
 						set_motor(2, 140);
 						sleep1(0, 100);
 						set_motor(1, -140);
@@ -46,8 +40,8 @@ int main() {
 					}
 				
 				}
-				if(wallRight > 500){
-					while(wallRight > 450){
+				if(wallRight > 550){
+					while(wallRight > 500){
 						set_motor(1, 140);
 						sleep1(0, 100);
 						set_motor(2, -140);
@@ -55,14 +49,13 @@ int main() {
 						wallRight = seeIR(1);
 					}
 				}else{
-					printf("Going strqaight\n");
+				
 					set_motor(1, 80);
   					sleep1(0, 100);
   					set_motor(2, 80);
   					sleep1(0, 100000);
 					redLineValue = seeRedLine(linePositionX);
 	 				if (redLineValue == 100002){
-						printf("Red Line\n");
 						redLine = true;
 					}
 				}
@@ -78,13 +71,16 @@ int main() {
 				while(wallFront > 150){
 					sleep1(0, 20000);
 					wallFront= seeIR(2);
+					printf("Seen Gate Waiting\n");
 				}
 				waiting = false;	
 			} else if(wallFront < 151){
 				sleep1(0,20000);	
+				printf("Waiting for gate\n");
 			}
 		}
-		redLine = false;		
+		redLine = false;
+		printf("Moving on\n");
 	}	
 	return 0;
 }
