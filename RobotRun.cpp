@@ -17,7 +17,7 @@ int main() {
   //Q2 follow line logic
 	char Q2 = 0;
 	while (Q2 == 0) {
-		double speedMultiplier = 1.05; //change this during testing
+		double speedMultiplier = 0.95; //change this during testing
 		int linePosition = 120; //change line position
 		int lineError = seeLineX(linePosition); 
 		if (lineError == 100000) {
