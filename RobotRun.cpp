@@ -36,8 +36,8 @@ int main() {
 				wallRight = seeIR(1); //Checks distance of wall at right
 				printf("Wall Left: %d\n", wallLeft);
 				printf("Wall Right: %d\n", wallRight);
-				if(wallLeft > 550){
-					while(wallLeft > 500){
+				if(wallLeft > 500){
+					while(wallLeft > 450){
 						set_motor(2, 140);
 						sleep1(0, 100);
 						set_motor(1, -140);
@@ -46,8 +46,8 @@ int main() {
 					}
 				
 				}
-				if(wallRight > 550){
-					while(wallRight > 500){
+				if(wallRight > 500){
+					while(wallRight > 450){
 						set_motor(1, 140);
 						sleep1(0, 100);
 						set_motor(2, -140);
