@@ -7,7 +7,9 @@
  */
 int  main(){
   init();
-  stop(1);
+  set_motor(1, 0);
+  sleep1(0, 100);
+  set_motor(2, 0);
   return  0;
 }
 
