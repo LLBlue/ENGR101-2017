@@ -75,9 +75,9 @@ int main() {
 				waiting = false;	
 			} else if(wallFront < 151){
 				sleep1(0,20000);
-				wallFront= seeIR(2);
 				printf("Waiting for gate\n");
 			}
+			wallFront= seeIR(2);
 		}
 		redLine = false;
 		printf("Moving on\n");
