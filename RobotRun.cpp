@@ -216,7 +216,8 @@ int main() {
 
 
 
-
+	setSpeed(0);
+	sleep1(0, 500000);
 	int wallLeft;
 	int wallRight;
 	int wallFront;
