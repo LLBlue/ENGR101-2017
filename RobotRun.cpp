@@ -21,10 +21,10 @@ int main() {
 				wallRight = seeIR(1); //Checks distance of wall at right
 			
 				if (wallLeft > 200){ //Turn Right (Possibly need smaller value)
-					turnRightIR(wallFront);
+					turnRightIR();
 				}
 				else if (wallRight > 200){ //Turn Left (Possibly need smaller value)
-					turnLeftIR(wallFront);
+					turnLeftIR();
 				}
 			} else {
 				wallLeft = seeIR(3); //Checks distance of wall at left
