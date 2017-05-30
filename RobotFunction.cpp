@@ -49,7 +49,7 @@ int turnRight (int seconds, int microseconds) {
 }
 
 int turnRightIR (int wallFront) {
-	while (wallFront > 100){ //Needs to find better values for checking
+	while (wallFront > 230){ //Needs to find better values for checking
 		set_motor(2, 140);
 		sleep1(0, 100);
 		set_motor(1, -140);
@@ -86,7 +86,7 @@ int turnRightIR() {
 */
 
 int turnLeftIR(int wallFront) {
-	while (wallFront > 100){ //Needs to find better values for checking
+	while (wallFront > 230){ //Needs to find better values for checking
 		set_motor(1, 140);
 		sleep1(0, 100);
 		set_motor(2, -140);
