@@ -4,6 +4,7 @@
 #include "RobotFunction.h"
 
 int main() {
+	init();
 	int wallLeft;
 	int wallRight;
 	while(true){
@@ -13,7 +14,7 @@ int main() {
 		printf("Input 1: %d\n", wallRight);
 	}
 	bool debug = false;
-	init();
+	
 	int wallFront;
 	
 	int redLineValue;
