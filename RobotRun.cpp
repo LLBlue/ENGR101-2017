@@ -14,10 +14,6 @@ int main() {
 	bool redLine = false;
 	bool waiting = true;
 	char Q4 = 0;
-	while(true){
-		wallFront = seeIR(2);
-		printf("Wall Front: /n%d", wallFront);	
-	}
 	while(Q4==0){
 		while(!redLine){
 			wallFront = seeIR(2); //Checks distance of wall in front
