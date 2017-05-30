@@ -80,6 +80,8 @@ int main() {
 			wallFront= seeIR(2);
 		}
 		redLine = false;
+		setSpeed(0);
+		sleep1(0, 200000);
 		printf("Moving on\n");
 	}	
 	return 0;
