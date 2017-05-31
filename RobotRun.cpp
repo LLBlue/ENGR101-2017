@@ -47,30 +47,20 @@ int main() {
 	char Q3 = 0;
 	while(Q3==0) {
 		lineError = seeLineX(linePositionX);
-		if(debug) {
-			printf("Line Error: %d", lineError);
-		}
+		if(debug) {printf("Line Error: %d", lineError);}
 		if (lineError == 100000) {//if no more line ahead then try turning left or right
 			lineOutputLeft = seeLineY(linePositionLeft);
-			if(debug) {
-				printf("output left: %d\n", lineOutputLeft);
-			}
+			if(debug) {printf("output left: %d\n", lineOutputLeft);}
 			lineOutputRight = seeLineY(linePositionRight);
-			if(debug){
-				printf("output right: %d\n", lineOutputRight);
-			}
+			if(debug){printf("output right: %d\n", lineOutputRight);}
 			if(lineOutputLeft != 100000) {//turn left
-				if(debug){
-					printf("turning left\n");
-				}
+				if(debug){printf("turning left\n");}
 				turnLeft(0, 100000);
 				while(seeLineX(linePositionX)== 100000 || seeLineX(linePositionX) <= -10) {
 					turnLeft(0, 30000);
 				}
 			} else if (lineOutputRight !=100000) {//turn right
-				if(debug){
-					printf("turning right\n");
-				}
+				if(debug){printf("turning right\n");}
 				turnRight(0, 100000);
 				while(seeLineX(linePositionX)== 100000 || seeLineX(linePositionX) >= 10) {
 					turnRight(0, 30000);
@@ -80,18 +70,14 @@ int main() {
 				while(seeLineX(linePositionX)== 100000 || seeLineX(linePositionX) >= 10) {
 					turnRight(0, 30000);
 				}
-				if(debug){
-					printf("turning around\n");
-				}
+				if(debug){printf("turning around\n");}
 			}
 			sleep1(0,10000);
 		} else {
 			if(lineError == 100001) {
 				lineError = 0;
 			}
-			if(debug){
-				printf("going straigt\n");
-			}
+			if(debug){printf("going straigt\n");}
 			setSpeedSlow(lineError*speedMultiplier) ;
 			sleep1(0,10000);
 		}
@@ -109,7 +95,6 @@ int main() {
 	int wallLeft;
 	int wallRight;
 	int wallFront;
-	//int redLineValue;
 	linePositionX = 120;
 	bool redLine = false;
 	bool waiting = true;
@@ -117,6 +102,7 @@ int main() {
 		while(!redLine){
 			wallFront = seeIR(2); //Checks distance of wall in front
 			if(wallFront >= 220){ //220 is distance we want to turn at
+				//If there is a wall in front and we need to turn
 				wallLeft = seeIR(3); //Checks distance of wall at left
 				wallRight = seeIR(1); //Checks distance of wall at right
 			
@@ -127,6 +113,7 @@ int main() {
 					turnLeftIR();
 				}
 			} else {
+				//If there isn't a wall in front and we want to turn
 				wallLeft = seeIR(3); //Checks distance of wall at left
 				wallRight = seeIR(1); //Checks distance of wall at right
 				if(wallLeft > 600){
@@ -160,7 +147,8 @@ int main() {
 				}
 			}
 		}
-		printf("Red shit\n");
+		//if we see the gate do this
+		if(debug){printf("Red Line Detected\n");}
 		set_motor(1, 0);
 		sleep1(0,100);
 		set_motor(2, 0);
@@ -170,19 +158,19 @@ int main() {
 				while(wallFront > 150){
 					sleep1(0, 20000);
 					wallFront= seeIR(2);
-					printf("Seen Gate Waiting\n");
+					if(debug){printf("Seen Gate Waiting\n");}
 				}
 				waiting = false;	
 			} else if(wallFront < 151){
 				sleep1(0,20000);
-				printf("Waiting for gate\n");
+				if(debug){printf("Waiting for gate\n");}
 			}
 			wallFront= seeIR(2);
 		}
 		redLine = false;
 		setSpeed(0);
 		sleep1(0, 200000);
-		printf("Moving on\n");
+		if(debug){printf("Moving on\n");}
 	}	
 	
 	return 0;
