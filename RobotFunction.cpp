@@ -18,7 +18,8 @@ int seeIR(int channel) {
   int averageReading = totalReading/count;
   return averageReading;
 }
-/*Turns left 90 degrees
+
+/*Turns left for a given time then stops
  */
 int turnLeft (int seconds, int microseconds) {
   int speed = 200;
@@ -33,7 +34,7 @@ int turnLeft (int seconds, int microseconds) {
 	return 0;
 }
 
-/*Turns right 90 degrees
+/*Turns right for a given time then stops
  */
 int turnRight (int seconds, int microseconds) {
   int speed = 200;
@@ -59,6 +60,11 @@ int turnRightIR (int wallFront) {
 }
 */
 
+/*Turns right until the difference of the distances between the front IR sensor becomes small
+ *should become small if there is a straight wall in front (no longer facing a side wall)
+ *or if there is empty space (reaings will be near zero)
+ */
+
 int turnRightIR() {
 	int maxDiff = 50;
 	int dist3 = 3000;
@@ -76,7 +82,7 @@ int turnRightIR() {
 			if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
 				return 0;
 			} else {
-				turnLeft(0, 50000);
+				turnLeft(0, 50000); //this works
 			}
 			dist3 = dist2;
 			dist2 = dist1;
@@ -96,6 +102,11 @@ int turnLeftIR(int wallFront) {
 }
 */
 
+/*Turns left until the difference of the distances between the front IR sensor becomes small
+ *should become small if there is a straight wall in front (no longer facing a side wall)
+ *or if there is empty space (reaings will be near zero)
+ */
+
 int turnLeftIR() {
 	int maxDiff = 50;
 	int dist3 = 3000;
@@ -113,7 +124,7 @@ int turnLeftIR() {
 			if(diff0 >= diff1-maxDiff && diff0 <= diff1+maxDiff && diff0 >= diff2-maxDiff && diff0 <= diff2+maxDiff){
 				return 0;
 			} else {
-				turnRight(0, 50000);
+				turnRight(0, 50000); //also works
 			}
 		  dist3 = dist2;
 			dist2 = dist1;
@@ -122,7 +133,7 @@ int turnLeftIR() {
 }
 
 
-/*Goes backwards slowly at given speed
+/*Goes backwards slowly for a given time
  */
 int slowBackward(int timeSeconds, int timeMicroseconds) {
   set_motor(1, -80);
@@ -175,7 +186,6 @@ int seeLineX(int Y) {
  * Output 100000 if no line
  */
 
-
 int seeLineY(int X) {
 	take_picture();
 	char noLineLimit = 5; //change to change how little white you need to determine there is no line
@@ -207,7 +217,6 @@ int seeLineY(int X) {
 /*Set Speed
  * Input: speed factor (left negative, right positive)
  * Changes speed to turn at that rate
- * Test which motor to + or -
  */
 
 int setSpeed (int speedFactor) {
@@ -222,8 +231,7 @@ int setSpeed (int speedFactor) {
 /*Set Speed Slow
  * Input: speed factor (left negative, right positive)
  * Changes speed to turn at that rate
- * Test which motor to + or -
- * Slower One
+ * Slower version for doing the maze
  */
 
 int setSpeedSlow (int speedFactor) {
