@@ -36,7 +36,7 @@ int main() {
   
   //Q3 solve line maze
   //need to make it check for a red square at some point for Q4
-	double speedMultiplier = 0.95; //change this during testing
+	double speedMultiplier = 1.05; //change this during testing
 	int linePositionX=120; //change line position
 	int linePositionLeft = 80; //change where it looks for the left and right lines
 	int linePositionRight = 120;
