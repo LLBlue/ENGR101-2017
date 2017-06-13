@@ -89,7 +89,7 @@ int main() {
 	}
 
 
-
+	//Q4 Clusterfuck
 	setSpeed(0);
 	sleep1(0, 500000);
 	int wallLeft;
