@@ -1,30 +1,30 @@
 Week 1 Goals: 
-Angus: Prototype Chassis (Completed) Sensors Wheels (Completed)
+Angus: Prototype Chassis (Completed), Mount Tracks(Completed), Mount Pi and PCB(completed)
 Audrey: Go foreward (Completed) camera detect line (Completed) code framework (Completed) automate compilation (Completed)
 Isaac: Is ill
 Ryan: code framework (Completed) Go foreward (Completed) 
 
 Week 2 Goals: 
-Angus: Finalise chassis (completed) Add sensors (completed) Put photos and design docs on github (completed)
+Angus: Improve chassis (completed) Add camera and front IR sensors (completed) Put photos and design docs on github (completed)
 Audrey: detect maze lines (completed) follow Q2 line (completed) Modify maze logic for Q3 (completed) update task list (completed)
 Isaac: Is ill
 Ryan: Open Gate (completed) maze logic (completed) detect walls (completed) solder motors (completed)
 
 Week 3 Goals:
 All: Make bullet point framework for report
-Angus: Draw robot diagram, mount side IR, upload design documents
+Angus: Finalise Chassis(completed), Draw robot diagram(completed), Mount side IR(completed), Upload design documents(completed)
 Audrey: Organize github wiki(done), Add ID control, Make stop script(done) Make batch delete script(done), fix see red error (completed), fix turning (completed)
 Issac: Does not turn upto labs or comminicate with group
 Ryan: See red patch, fix col/row mixup, fix negative speed error, fix follow line
 
 Week 4 Goals: 
-Angus: Print off final chassis parts (compleated) Draw diagram of robot (complated)
+Angus: Print off final chassis parts(compleated), Draw diagram of robot (complated), Improve mounting(completed) 
 Audrey: Run Q3 tests make sure it's functional (compleated) Make Q4 logic  (compleated)
 Issac: Does not turn upto labs or comminicate with group
 Ryan:Make Q4 turning function  (compleated) Test Q3 and Q4  (compleated)
 
 Week 5 Goals
-Angus: 
+Angus: Add switch(completed), Cable management(completed), File and sand parts(completed), 
 Audrey: 
 Issac: 
 Ryan:
