@@ -1,26 +1,11 @@
 # ENGR101-2017
+C++ code for controlling Raspberry Pi 2s in ENGR101 during 2017
 
-Robot completing the maze:
+# Robot completing the maze:
 https://www.youtube.com/watch?v=5tTFfrAJGQg
 
 
-
-C++ code for controlling Raspberry Pi 2s in ENGR101 during 2017
-
-Analog 1: front  
-Analog 2: left  
-Analog 3: right  
-
-Pi IP: 10.140.30.210
-
-cat ~/.bash_aliases
-cat ~/.bashrc
-vim ~/.bash_aliases
-alias pissh='ssh pi@10.140.30.210'
-source ~/.bash_aliases
-
-
-To Edit:
+# To Edit:
 
 Main logic goes in RobotRun.cpp
 
