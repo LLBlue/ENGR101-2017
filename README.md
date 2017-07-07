@@ -1,6 +1,6 @@
 # ENGR101-2017
 
-# Robot completing the maze:
+Robot completing the maze:
 https://www.youtube.com/watch?v=5tTFfrAJGQg
 
 
